@@ -27,6 +27,7 @@ public class PlayerAim : MonoBehaviour
             {
                 transform.localScale = new Vector3(1, 1, 1);
             }
+            Debug.DrawRay(transform.position, (Vector3)aimDirection * 2f, Color.green);
         }
     }
 }
