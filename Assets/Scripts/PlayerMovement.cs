@@ -7,21 +7,24 @@ public class PlayerMovement : MonoBehaviour
 {
     PlayerInput characterInput;
     Rigidbody2D characterRigidbody2D;
-   
+    //Animator characterAnimator;
+    PlayerAim playerAim;
     
     Vector2 moveInput;
-    public float speed = 5.0f; // Aumenté un poco la velocidad base
+    public float speed = 5.0f;
 
-    Vector3 originalScale;
+    [SerializeField] float sprintSpeed = 9f; // ← sprint
+    private bool isSprinting;
+
+    
 
     void Start()
     {
         characterRigidbody2D = GetComponent<Rigidbody2D>();
         characterInput = GetComponent<PlayerInput>();
-        
-        
-        originalScale = transform.localScale;
-
+        playerAim = GetComponent<PlayerAim>();
+        //characterAnimator = GetComponent<Animator>();
+     
        
         characterRigidbody2D.gravityScale = 0f;
         characterRigidbody2D.freezeRotation = true; 
@@ -30,15 +33,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = characterInput.actions["Move"].ReadValue<Vector2>();
+        isSprinting = Keyboard.current.leftShiftKey.isPressed;
+        if (playerAim == null) return;
 
-
+        //characterAnimator.SetFloat("moveX", moveInput.x);
+        if (playerAim != null && !playerAim.isAiming && moveInput.x != 0)
+        {
+            playerAim.FlipSprite(moveInput.x);
+        }
         
         
     }
 
     void FixedUpdate()
     {
-        
-        characterRigidbody2D.linearVelocity = moveInput * speed;
+        float currentSpeed = isSprinting ? sprintSpeed : speed;
+        characterRigidbody2D.linearVelocity = moveInput * currentSpeed;
     }
 }

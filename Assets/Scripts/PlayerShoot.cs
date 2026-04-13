@@ -1,20 +1,25 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerShoot : MonoBehaviour
 {
     public Transform firePoint;
     private PlayerAim playerAim;
-    float range = 10f;
+    [SerializeField]float range = 10f;
+    [SerializeField] float fireDelay = 1.5f;
+    private bool canShoot = true;
+    //private Animator animator;
    
     void Awake()
     {
         playerAim = GetComponent<PlayerAim>();
+        //animator = GetComponent<Animator>(); 
     }
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame && playerAim.isAiming && canShoot)
         {
             Shoot();
         }
@@ -29,5 +34,16 @@ public class PlayerShoot : MonoBehaviour
         {
             Destroy(hit.collider.gameObject);
         }
+        
+        StartCoroutine(ShootCooldown());
+        
+    }
+    IEnumerator ShootCooldown()
+    {
+        canShoot = false;
+        // animator.SetTrigger("Shoot");
+        yield return new WaitForSeconds(fireDelay);
+        // animator.SetTrigger("Reload");
+        canShoot = true;
     }
 }
