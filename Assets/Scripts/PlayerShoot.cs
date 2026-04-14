@@ -8,6 +8,8 @@ public class PlayerShoot : MonoBehaviour
     private PlayerAim playerAim;
     [SerializeField]float range = 10f;
     [SerializeField] float fireDelay = 1.5f;
+    [SerializeField] int damage = 100;
+    [SerializeField] private LayerMask enemyLayer;
     private bool canShoot = true;
     //private Animator animator;
    
@@ -27,12 +29,15 @@ public class PlayerShoot : MonoBehaviour
     void Shoot()
     {
         Vector2 direction = playerAim.aimDirection;
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, direction, range);
-        Color rayColor = hit.collider != null ? Color.yellow : Color.red;
-        Debug.DrawRay(firePoint.position, direction * range, rayColor, 1f);
-        if (hit.collider != null && hit.collider.CompareTag("Enemy"))
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, direction, range, enemyLayer);
+        Debug.DrawRay(firePoint.position, direction * range, hit.collider != null ? Color.green : Color.red, 0.5f);
+        if (hit.collider != null)
         {
-            Destroy(hit.collider.gameObject);
+            Health enemyHealth = hit.collider.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
         }
         
         StartCoroutine(ShootCooldown());
