@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     PlayerInput characterInput;
     Rigidbody2D characterRigidbody2D;
-    //Animator characterAnimator;
+    Animator characterAnimator;
     PlayerAim playerAim;
     
     Vector2 moveInput;
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         characterRigidbody2D = GetComponent<Rigidbody2D>();
         characterInput = GetComponent<PlayerInput>();
         playerAim = GetComponent<PlayerAim>();
-        //characterAnimator = GetComponent<Animator>();
+        characterAnimator = GetComponentInChildren<Animator>();
      
        
         characterRigidbody2D.gravityScale = 0f;
@@ -35,8 +35,11 @@ public class PlayerMovement : MonoBehaviour
         moveInput = characterInput.actions["Move"].ReadValue<Vector2>();
         isSprinting = Keyboard.current.leftShiftKey.isPressed;
         if (playerAim == null) return;
-
-        //characterAnimator.SetFloat("moveX", moveInput.x);
+        if (characterAnimator != null)
+        {
+            characterAnimator.SetFloat("moveX", Mathf.Abs(moveInput.x));
+            characterAnimator.speed = isSprinting ? 2f : 1f;
+        }
         if (playerAim != null && !playerAim.isAiming && moveInput.x != 0)
         {
             playerAim.FlipSprite(moveInput.x);
