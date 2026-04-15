@@ -57,12 +57,16 @@ public class EnemyBase : MonoBehaviour
         }
         moveDirection = (player.position - transform.position).normalized;
         transform.position += (Vector3)moveDirection * moveSpeed * Time.deltaTime;
-        if (moveDirection.x > 0 && !facingRight)
+        // Solo hace flip si el movimiento horizontal es significativo
+        if (Mathf.Abs(moveDirection.x) > 0.1f)
         {
-            Flip();
-        }else if (moveDirection.x < 0 && facingRight)
-        {
-            Flip();
+            if(moveDirection.x > 0 && !facingRight)
+            {
+                Flip();
+            }else if(moveDirection.x < 0 && facingRight)
+            { 
+                Flip();
+            }
         }
 
     }
