@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9766f233008406247b4217d70c87f1da
+guid: 61b0e0a732bbc724480b63ad25031bbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4209545993510608248
-    second: BigGuy_Enemy_0
+      213: -4295908066817869013
+    second: DogStatic_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BigGuy_Enemy_0
+      name: DogStatic_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 79
-        width: 662
-        height: 672
+        x: 1
+        y: 0
+        width: 59
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 882a127d830b495c0800000000000000
-      internalID: -4209545993510608248
+      spriteID: b2bf599bf5ed164c0800000000000000
+      internalID: -4295908066817869013
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BigGuy_Enemy_0: -4209545993510608248
+      DogStatic_0: -4295908066817869013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
