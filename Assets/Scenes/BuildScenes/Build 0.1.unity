@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: 124}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -265.4, y: 119.3}
+  m_SizeDelta: {x: 64, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7387745
 MonoBehaviour:
@@ -169,14 +169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.254717, g: 0.08770915, b: 0.08770915, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ed35a05d72133f54a96b5c5c3883069c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -228,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: 124}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -259.39996, y: 113.8}
+  m_SizeDelta: {x: 76, y: 21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &92446603
 MonoBehaviour:
@@ -244,14 +244,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.059763268, b: 0.059763268, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 0e2f6c8da942fb14ba8e5ced7bf32f4f, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3772,7 +3772,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 640, y: 360}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3837,7 +3837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LifebarUI
   barFillImage: {fileID: 92446603}
-  playerData: {fileID: 11400000, guid: 0a051a28df5bddf41b37a6a2e02a7a5a, type: 2}
 --- !u!1 &1263253477
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,6 +4650,11 @@ Transform:
   - {fileID: 1263253478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1978291599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2612514683944322841, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+  m_PrefabInstance: {fileID: 1479113117333557147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1479113117333557147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4713,13 +4717,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5203528150837550722, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       insertIndex: 0
       addedObject: {fileID: 532144758}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2612514683944322841, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479113117333557156}
   m_SourcePrefab: {fileID: 100100000, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
 --- !u!4 &1479113117333557148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5203528150837550722, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
   m_PrefabInstance: {fileID: 1479113117333557147}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479113117333557156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978291599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66087b1d3c3ef444b1579ae2274095b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1001 &2609416071281096875
 PrefabInstance:
   m_ObjectHideFlags: 0

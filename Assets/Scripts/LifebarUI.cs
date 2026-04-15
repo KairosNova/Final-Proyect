@@ -4,15 +4,17 @@ using UnityEngine.UI;
 public class LifebarUI : MonoBehaviour
 {
     [SerializeField] private Image barFillImage;
-    [SerializeField] private PlayerData playerData;
 
     private void Start()
     {
-        UpdateBar();
+        PlayerHealth.onHealthPercentageChanged += UpdateBar;
     }
 
-    private void UpdateBar()
+    private void UpdateBar(float percentage)
     {
-        barFillImage.fillAmount = playerData.currentHealth / playerData.maxHealth;
+        if (percentage > 1f) percentage = 1f;
+        if (percentage < 0f) percentage = 0f;
+
+        barFillImage.fillAmount = percentage;
     }
 }

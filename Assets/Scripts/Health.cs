@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    private int currentHealth;
-    public int CurrentHealth => currentHealth;
-    public int MaxHealth => maxHealth;
+    [SerializeField] private float maxHealth = 100;
+    [SerializeField] private float currentHealth;
+    public float CurrentHealth => currentHealth;
+    public float MaxHealth => maxHealth;
     public bool IsDead => currentHealth <= 0;
     public float HealthPercent => (float)currentHealth / maxHealth;
+    
     void Awake()
     {
         currentHealth = maxHealth;
     }
+
     public void Initialize(int hp)
     {
         maxHealth = hp;
         currentHealth = hp;
-    } 
-    public void TakeDamage(int damage)
+    }
+
+    public virtual void TakeDamage(int damage)
     {
         if(IsDead)
         {
@@ -34,7 +37,6 @@ public class Health : MonoBehaviour
         }
     }
     
-
     protected virtual void OnDeath()
     {
         Debug.Log($"{gameObject.name} murió");
