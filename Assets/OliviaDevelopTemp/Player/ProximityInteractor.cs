@@ -13,7 +13,7 @@ public class ProximityInteractor : MonoBehaviour
     private HashSet<Transform> targets;
     private bool isLookingForTarget;
 
-    private float offset;
+    private GameObject grabbedObject;
 
     private void Awake()
     {
@@ -88,14 +88,24 @@ public class ProximityInteractor : MonoBehaviour
         {
             closestTarget.position = transform.position;
             closestTarget.parent = transform;
+            grabbedObject = closestTarget.gameObject;
         }
+    }
+
+    private void DropGrabbedObject()
+    {
+        Debug.Log("Dropeado");
+        grabbedObject.transform.position = transform.position; // + offset en un futuro
+        grabbedObject.transform.parent = null;
+        grabbedObject = null;
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            GrabClosestTarget();
+            if (grabbedObject == null) GrabClosestTarget();
+            else DropGrabbedObject();
         }
     }
 }
