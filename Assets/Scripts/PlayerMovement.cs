@@ -33,12 +33,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = characterInput.actions["Move"].ReadValue<Vector2>();
-        isSprinting = Keyboard.current.leftShiftKey.isPressed;
+        isSprinting = Keyboard.current.leftShiftKey.isPressed && moveInput.magnitude > 0;
         if (playerAim == null) return;
         if (characterAnimator != null)
         {
-            characterAnimator.SetFloat("moveX", Mathf.Abs(moveInput.x));
-            characterAnimator.speed = isSprinting ? 2f : 1f;
+            characterAnimator.SetFloat("moveX" ,moveInput.magnitude);
+            characterAnimator.SetBool("isSprinting", isSprinting);
         }
         if (playerAim != null && !playerAim.isAiming && moveInput.x != 0)
         {

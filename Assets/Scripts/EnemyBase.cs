@@ -11,7 +11,8 @@ public class EnemyBase : MonoBehaviour
     protected Health health;
     protected bool hasDetectedPlayer = false;
     protected Vector2 moveDirection;
-
+    [Header("Giro")]
+    protected bool facingRight = true;
     protected virtual void Awake()
     {
         health = GetComponent<Health>();
@@ -56,7 +57,22 @@ public class EnemyBase : MonoBehaviour
         }
         moveDirection = (player.position - transform.position).normalized;
         transform.position += (Vector3)moveDirection * moveSpeed * Time.deltaTime;
+        if (moveDirection.x > 0 && !facingRight)
+        {
+            Flip();
+        }else if (moveDirection.x < 0 && facingRight)
+        {
+            Flip();
+        }
 
+    }
+
+    protected virtual void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
     
     public virtual void OnDeath()
