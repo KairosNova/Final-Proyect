@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 
 
@@ -34,15 +33,16 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
         Debug.Log($"{gameObject.name} recibió {damage} daño. HP: {currentHealth}/{maxHealth}");
-        if (IsDead)
+        if (currentHealth <= 0)
         {
-            OnDeath();
+            Death();
         }
+        
     }
     
-    protected virtual void OnDeath()
+    protected virtual void Death()
     {
         Debug.Log($"{gameObject.name} murió");
-        GetComponent<EnemyBase>()?.OnDeath();
+        SendMessage("OnDeath", SendMessageOptions.DontRequireReceiver);
     }
 }

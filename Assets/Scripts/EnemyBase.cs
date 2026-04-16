@@ -14,11 +14,13 @@ public class EnemyBase : MonoBehaviour
     protected Vector2 moveDirection;
     [Header("Giro")]
     protected bool facingRight = true;
+    protected Rigidbody2D rb;
     protected virtual void Awake()
     {
         health = GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<Health>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     protected virtual void Update()
@@ -39,16 +41,15 @@ public class EnemyBase : MonoBehaviour
         }
         Vector2 directionToPlayer = (player.position - transform.position).normalized;
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanceToPlayer > detectionRange)
-        {
-            return;
-        } 
-        float angle = Vector2.Angle(moveDirection, directionToPlayer);
+        if (distanceToPlayer > detectionRange) return;
+        Vector2 currentDirection = moveDirection == Vector2.zero ? Vector2.right : moveDirection;
+        float angle = Vector2.Angle(currentDirection, directionToPlayer);
         if (angle <= detectionAngle / 2f)
         {
             hasDetectedPlayer = true;
             Debug.Log($"{gameObject.name} detectó al jugador");
-        }
+        } 
+        
 
     }
     protected virtual void ChasePlayer()
@@ -57,15 +58,16 @@ public class EnemyBase : MonoBehaviour
         {
             return;
         }
+        float distance = Vector2.Distance(transform.position, player.position);
         moveDirection = (player.position - transform.position).normalized;
-        transform.position += (Vector3)moveDirection * moveSpeed * Time.deltaTime;
-        // Solo hace flip si el movimiento horizontal es significativo
+        if (distance > 0.5f)
+        {
+            rb.linearVelocity = moveDirection * moveSpeed;
+        }
         if (Mathf.Abs(moveDirection.x) > 0.1f)
         {
-            if(moveDirection.x > 0 && !facingRight)
-            {
-                Flip();
-            }else if(moveDirection.x < 0 && facingRight)
+            if (moveDirection.x > 0 && !facingRight) Flip();
+            else if(moveDirection.x < 0 && facingRight)
             { 
                 Flip();
             }
@@ -79,6 +81,11 @@ public class EnemyBase : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+    
+    protected void StopMovement()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
     
     public virtual void OnDeath()

@@ -119,6 +119,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &32181283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6567845570378610296, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
+  m_PrefabInstance: {fileID: 2609416071281096875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &32181290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32181283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6491c007a4d904d942440c2e25559f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigGuyBoss
+  currentState: 0
+  moveSpeed: 3
+  damage: 50
+  attackRange: 2
+  attackWindup: 0.5
+  vulnerableDuration: 3
+  deathAnimationTime: 1.2
 --- !u!1001 &1479113117333557147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,18 +256,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5664308130057606333, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
-      propertyPath: detectionRange
-      value: 5
+    - target: {fileID: 4654503879386664145, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6567845570378610296, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
       propertyPath: m_Name
       value: BigGuy_Enemy_Static
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6567845570378610296, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 32181290}
   m_SourcePrefab: {fileID: 100100000, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
 --- !u!1001 &7539517559094988894
 PrefabInstance:
