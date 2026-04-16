@@ -129,7 +129,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.005003631, y: -0.40503716}
+  m_Offset: {x: 0.075050354, y: -0.39925098}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +139,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7610861, y: 1.0700743}
+  m_Size: {x: 1.1806943, y: 1.058502}
   m_EdgeRadius: 0
 --- !u!50 &5310843006333743523
 Rigidbody2D:
@@ -182,8 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DogEnemy
   detectionRange: 5
   detectionAngle: 60
-  moveSpeed: 4
-  damage: 50
+  moveSpeed: 5
+  damage: 15
 --- !u!114 &2786106899649085161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,3 +197,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+  currentHealth: 0

@@ -10,21 +10,24 @@ public class Health : MonoBehaviour
     public float MaxHealth => maxHealth;
     public bool IsDead => currentHealth <= 0;
     public float HealthPercent => (float)currentHealth / maxHealth;
+    public bool isInvulnerable = false;
     
     void Awake()
     {
         currentHealth = maxHealth;
     }
-
-    public void Initialize(int hp)
+    public void SetInvulnerable(bool invulnerable)
     {
-        maxHealth = hp;
-        currentHealth = hp;
+        isInvulnerable = invulnerable;
     }
 
     public virtual void TakeDamage(int damage)
     {
         if(IsDead)
+        {
+            return;
+        }
+        if (isInvulnerable)
         {
             return;
         }

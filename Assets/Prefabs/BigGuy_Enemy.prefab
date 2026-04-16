@@ -181,6 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 400
+  currentHealth: 0
+  isInvulnerable: 0
 --- !u!114 &5664308130057606333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,3 +199,6 @@ MonoBehaviour:
   detectionAngle: 60
   moveSpeed: 3
   damage: 50
+  vulnerableWindow: 2
+  attackDuration: 0.5
+  attackArea: {fileID: 0}

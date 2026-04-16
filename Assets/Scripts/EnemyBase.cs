@@ -9,6 +9,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected float moveSpeed = 3f;
     protected Transform player;
     protected Health health;
+    protected Health playerHealth;
     protected bool hasDetectedPlayer = false;
     protected Vector2 moveDirection;
     [Header("Giro")]
@@ -17,6 +18,7 @@ public class EnemyBase : MonoBehaviour
     {
         health = GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHealth = player.GetComponent<Health>();
     }
 
     protected virtual void Update()
