@@ -11,12 +11,12 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] int damage = 100;
     [SerializeField] private LayerMask enemyLayer;
     private bool canShoot = true;
-    //private Animator animator;
+    private Animator animator;
    
     void Awake()
     {
         playerAim = GetComponent<PlayerAim>();
-        //animator = GetComponent<Animator>(); 
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -46,9 +46,9 @@ public class PlayerShoot : MonoBehaviour
     IEnumerator ShootCooldown()
     {
         canShoot = false;
-        // animator.SetTrigger("Shoot");
+        animator.SetTrigger("Shoot");
         yield return new WaitForSeconds(fireDelay);
-        // animator.SetTrigger("Reload");
+        
         canShoot = true;
     }
 }

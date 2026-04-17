@@ -8,17 +8,25 @@ public class BigEnemy : MonoBehaviour
     
     [Header("Estado Actual (Solo visualización)")]
     public BossState currentState = BossState.Chasing;
+    [Header("Detección")]
+    public float detectionRange = 5f; // Rango para que empiece a perseguir
+    public bool hasDetectedPlayer = false;
 
     [Header("Estadísticas")]
     public float moveSpeed = 3f;
     public int damage = 50;
+    public int damageShield = 20;
 
     [Header("Ataque y Vulnerabilidad")]
-    public float attackRange = 2f;
+    public float attackRange = 2f;// rango ataque 1
+    public float shieldRange = 0.8f;    // rango ataque 2 — muy cerca
+    
+    [Header("Tiempos")]
     public float attackWindup = 0.5f; // Tiempo que "carga" el golpe antes de darlo
     public float vulnerableDuration = 3f;
-    [Header("Tiempos de Animación")]
-    public float deathAnimationTime = 1.2f; // Ajusta esto a lo que dure tu animación de muerte
+    public float deathAnimationTime = 0.6f; // Ajusta esto a lo que dure tu animación de muerte
+    public float attackCooldown = 2f;
+    private float currentCooldown = 0f;
 
     // Referencias internas
     private Transform player;
@@ -50,30 +58,53 @@ public class BigEnemy : MonoBehaviour
         if (currentState == BossState.Dead || player == null) return;
 
         // La Máquina de Estados: El enemigo decide qué hacer según su estado
+        if (currentCooldown > 0)currentCooldown -= Time.deltaTime;
+        float distance = Vector2.Distance(transform.position, player.position);
+        if (!hasDetectedPlayer && distance <= detectionRange)
+        {
+            hasDetectedPlayer = true;
+            Debug.Log("¡El Big Guy te ha visto!");
+        }
+
         switch (currentState)
         {
-            case BossState.Chasing:
-                ChasePlayer();
-                CheckAttackRange();
+            case BossState.Chasing:            
+                
+                if (hasDetectedPlayer)
+                {
+                    ChasePlayer(distance);
+                    CheckAttackRange(distance);
+                }else
+                {
+                    // Si no te ha visto, se asegura de estar en Idle
+                    if (anim != null) anim.SetFloat("Speed", 0f);
+                }
+                
                 break;
 
             case BossState.Attacking:
-                // Se queda quieto mientras ataca (la lógica está en la Corrutina)
                 break;
 
             case BossState.Vulnerable:
                 // Se queda quieto y vulnerable (la lógica está en la Corrutina)
+                if (anim != null) anim.SetFloat("Speed", 0f);// Quieto en estos estados
                 break;
         }
     }
 
-    private void ChasePlayer()
+    private void ChasePlayer(float distance)
     {
-        if (anim != null) anim.SetBool("isChasing", true);
-        // 1. Moverse hacia el jugador (Ignoramos físicas complejas, vamos a lo seguro)
-        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-
-        // 2. Mirar al jugador (Flip simple)
+        // Solo se mueve si no está pegado al jugador
+        if (distance > 0.5f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            if (anim != null) anim.SetFloat("Speed", moveSpeed); // Enviamos la velocidad al Animator
+        }else
+        {
+            if (anim != null) anim.SetFloat("Speed", 0f);
+        }
+        
+        // Mirar al jugador (Flip simple)
         if (player.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(1, 1, 1); // Mira a la derecha
@@ -84,30 +115,37 @@ public class BigEnemy : MonoBehaviour
         }
     }
 
-    private void CheckAttackRange()
+    private void CheckAttackRange(float distance)
     {
-        float distance = Vector2.Distance(transform.position, player.position);
-        if (distance <= attackRange)
+        if (currentCooldown > 0) return;
+        
+        // Si está muy cerca → ataque 2 escudo, no deja vulnerable
+        if (distance <= shieldRange)
+        {
+            StartCoroutine(ShieldAttackSequence());
+        }else if (distance <= attackRange)
         {
             StartCoroutine(AttackSequence());
         }
     }
-
+    // ATAQUE 1 — fuerte, deja vulnerable
     private IEnumerator AttackSequence()
     {
         // Cambiamos de estado: Deja de perseguir
         currentState = BossState.Attacking;
+        currentCooldown = attackCooldown;
         if (anim != null)
         {
-            anim.SetBool("isChasing", false);
+            anim.SetFloat("Speed", 0f);
             anim.SetTrigger("Attack");
         }
 
         // 1. Telegrafiar el golpe (se pone naranja y espera medio segundo)
-        spriteRenderer.color = new Color(1f, 0.5f, 0f); 
+        spriteRenderer.color = new Color(1f, 0.5f, 0f);
         yield return new WaitForSeconds(attackWindup);
 
         // 2. Dar el golpe (Detección por círculo invisible)
+        spriteRenderer.color = Color.white;
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
         foreach (Collider2D hit in hits)
         {
@@ -125,17 +163,46 @@ public class BigEnemy : MonoBehaviour
         // 3. Inmediatamente después de pegar, se vuelve vulnerable
         StartCoroutine(VulnerableSequence());
     }
+     // ATAQUE 2 — escudo, NO deja vulnerable
+    private IEnumerator ShieldAttackSequence()
+    {
+        currentState = BossState.Attacking;
+        currentCooldown = attackCooldown / 2f; // cooldown más corto
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", 0f);
+            anim.SetTrigger("Attack2");
+        }
+        spriteRenderer.color = new Color(0.5f, 0.5f, 1f); // azul — telegrafía escudo
+        yield return new WaitForSeconds(attackWindup / 2f);
+        // Golpe escudo
+        spriteRenderer.color = Color.white;
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, shieldRange + 0.3f);
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                Health playerHealth = hit.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damageShield);
+                    Debug.Log("Ataque 2 — escudo");
+                }
+            }
+        }
+        yield return new WaitForSeconds(0.5f);// Pequeña pausa para recuperar postura
+        currentState = BossState.Chasing;
+    }
+
 
     private IEnumerator VulnerableSequence()
     {
         // Cambiamos de estado
         currentState = BossState.Vulnerable;
-        if (anim != null) anim.SetTrigger("Vulnerable");
-        
+        // Sin trigger — la transición sale sola por Exit Time de Attack1
         // Se pone rojo y SE APAGA LA INVULNERABILIDAD
         spriteRenderer.color = Color.red;
         if (myHealth != null) myHealth.SetInvulnerable(false);
-        Debug.Log("¡DALE AHORA! Es vulnerable.");
 
         // Espera el tiempo de vulnerabilidad
         yield return new WaitForSeconds(vulnerableDuration);
@@ -147,7 +214,6 @@ public class BigEnemy : MonoBehaviour
     }
     public void OnDeath()
     {
-        Debug.Log("¡MENSAJE RECIBIDO! BigGuy empezando secuencia de muerte.");
         if (currentState == BossState.Dead) return;
         StartCoroutine(DeathRoutine());
     }
@@ -155,7 +221,11 @@ public class BigEnemy : MonoBehaviour
     {
         currentState = BossState.Dead;
         if (anim != null) anim.SetTrigger("Die");
-        if (rb != null) rb.linearVelocity = Vector2.zero;
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
         spriteRenderer.color = Color.white;
         yield return new WaitForSeconds(deathAnimationTime);
         Destroy(gameObject);
@@ -166,5 +236,9 @@ public class BigEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, shieldRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }
