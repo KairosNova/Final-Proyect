@@ -11,7 +11,7 @@ public class ProximityInteractor : MonoBehaviour
 
     private Transform closestTarget;
     private HashSet<Transform> targets;
-    private bool isLookingForTarget;
+    private bool isLookingForTarget = true;
 
     private GameObject grabbedObject;
 
@@ -91,26 +91,6 @@ public class ProximityInteractor : MonoBehaviour
     {
         isLookingForTarget = true;
     }
-
-    /*/ DESCARTADO, AGARRE DE OBJETOS
-    private void GrabClosestTarget()
-    {
-        if (targets.Count > 0)
-        {
-            closestTarget.position = transform.position;
-            closestTarget.parent = transform;
-            grabbedObject = closestTarget.gameObject;
-        }
-    }
-
-    private void DropGrabbedObject()
-    {
-        Debug.Log("Dropeado");
-        grabbedObject.transform.position = transform.position; // + offset en un futuro
-        grabbedObject.transform.parent = null;
-        grabbedObject = null;
-    }
-    /*/
 
     public void OnInteract(InputAction.CallbackContext context)
     {
