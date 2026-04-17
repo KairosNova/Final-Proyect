@@ -28,6 +28,15 @@ public class AgentMovement : MonoBehaviour
     {
         agent.updateRotation = false;
         StartCurrentState();
+
+        if (!agent.isOnNavMesh)
+        {
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(transform.position, out hit, 5f, NavMesh.AllAreas))
+            {
+                agent.Warp(hit.position);
+            }
+        }
     }
 
     public void SetState(AgentState state)
