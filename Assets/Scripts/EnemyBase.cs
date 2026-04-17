@@ -15,6 +15,10 @@ public class EnemyBase : MonoBehaviour
     [Header("Giro")]
     protected bool facingRight = true;
     protected Rigidbody2D rb;
+    [Header("Patrullaje (Waypoints)")]
+    public Transform[] waypoints; // Puntos por los que rondará
+    public float patrolSpeed = 2f; // Velocidad al rondar (suele ser más lenta que perseguir)
+    private int currentWaypointIndex = 0;
     protected virtual void Awake()
     {
         health = GetComponent<Health>();
@@ -27,10 +31,31 @@ public class EnemyBase : MonoBehaviour
     {
         if (!hasDetectedPlayer)
         {
+            Patrol();
             TryDetectPlayer();
         }else
         {
             ChasePlayer();
+        }
+    }
+    protected virtual void Patrol()
+    {
+        if (waypoints == null || waypoints.Length == 0) return;
+        Transform target = waypoints[currentWaypointIndex];
+        transform.position = Vector2.MoveTowards(transform.position, target.position, patrolSpeed * Time.deltaTime);
+        Vector2 direction = target.position - transform.position;
+        if (direction.x > 0.01f && !facingRight) Flip();
+        else if (direction.x < -0.01f && facingRight) Flip();
+        // Si ya llegó al punto, cambiamos al siguiente objetivo de la lista
+        if (Vector2.Distance(transform.position, target.position) < 0.1f)
+        {
+            currentWaypointIndex++;
+            // Si llegó al último punto, vuelve a empezar desde el 0 (creando un bucle infinito)
+            if (currentWaypointIndex >= waypoints.Length)
+            {
+                currentWaypointIndex = 0;
+            }
+        
         }
     }
     private void TryDetectPlayer()
