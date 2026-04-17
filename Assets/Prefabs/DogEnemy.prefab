@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5310843006333743523}
   - component: {fileID: 8603757181624632212}
   - component: {fileID: 2786106899649085161}
+  - component: {fileID: 8604475484586605546}
   m_Layer: 3
   m_Name: DogEnemy
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -6.78, y: 0.06, z: 0}
-  m_LocalScale: {x: 1.4741738, y: 1.27472, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 61b0e0a732bbc724480b63ad25031bbd, type: 3}
+  m_Sprite: {fileID: 6666358320907399656, guid: 505c89038879c574d99cb6514932fdf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,17 +130,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.005003631, y: -0.40503716}
+  m_Offset: {x: -0.1343453, y: 0.55074173}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    pivot: {x: 0.5, y: 0.24}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 0.15, y: 0.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7610861, y: 1.0700743}
+  m_Size: {x: 1.8844314, y: 1.2013761}
   m_EdgeRadius: 0
 --- !u!50 &5310843006333743523
 Rigidbody2D:
@@ -180,10 +181,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c059d828552c747a1884dfb4a3ea5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DogEnemy
-  detectionRange: 5
-  detectionAngle: 60
-  moveSpeed: 4
-  damage: 50
+  detectionRange: 5.5
+  detectionAngle: 360
+  moveSpeed: 5
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  patrolSpeed: 2
+  damage: 15
 --- !u!114 &2786106899649085161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,3 +202,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+  currentHealth: 0
+  isInvulnerable: 0
+--- !u!95 &8604475484586605546
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897601582938522605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91c967e15abe9c343a206fecad0653d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   firePoint: {fileID: 1100077250301824378}
   range: 10
-  fireDelay: 1.5
+  fireDelay: 2
   damage: 100
   enemyLayer:
     serializedVersion: 2
@@ -158,6 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+  currentHealth: 0
+  isInvulnerable: 0
 --- !u!61 &6165974192244092441
 BoxCollider2D:
   m_ObjectHideFlags: 0

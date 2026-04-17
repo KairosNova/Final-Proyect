@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 441308332879573350}
   - component: {fileID: 4654503879386664145}
   - component: {fileID: 6367742675712946581}
-  - component: {fileID: 5664308130057606333}
+  - component: {fileID: 302616583112923444}
+  - component: {fileID: 1768034304181395343}
+  - component: {fileID: 8906541704051168800}
   m_Layer: 3
   m_Name: BigGuy_Enemy
   m_TagString: Enemy
@@ -29,13 +31,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6567845570378610296}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 4.7, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &2808809083862298539
 SpriteRenderer:
   serializedVersion: 2
@@ -83,7 +85,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 9766f233008406247b4217d70c87f1da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -149,7 +151,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6567845570378610296}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -181,7 +183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 400
---- !u!114 &5664308130057606333
+  currentHealth: 0
+  isInvulnerable: 0
+--- !u!114 &302616583112923444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,10 +194,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 6567845570378610296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01492703a8423d4f844ce925a1910cf, type: 3}
+  m_Script: {fileID: 11500000, guid: aa6491c007a4d904d942440c2e25559f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BigGuyEnemy
+  m_EditorClassIdentifier: Assembly-CSharp::BigEnemy
+  currentState: 0
   detectionRange: 5
-  detectionAngle: 60
+  hasDetectedPlayer: 0
+  moveSpeed: 2
+  damage: 50
+  damageShield: 20
+  attackRange: 2
+  shieldRange: 0.8
+  attackWindup: 0.5
+  vulnerableDuration: 3
+  deathAnimationTime: 1.2
+  attackCooldown: 2
+--- !u!114 &1768034304181395343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567845570378610296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6491c007a4d904d942440c2e25559f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigGuyBoss
+  currentState: 0
+  detectionRange: 5
+  hasDetectedPlayer: 0
   moveSpeed: 3
   damage: 50
+  damageShield: 20
+  attackRange: 2
+  shieldRange: 0.8
+  attackWindup: 0.5
+  vulnerableDuration: 3
+  deathAnimationTime: 1.2
+  attackCooldown: 2
+--- !u!95 &8906541704051168800
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567845570378610296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13ed2d1c689e3f94382afe26208b97f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
