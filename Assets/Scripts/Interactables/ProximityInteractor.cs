@@ -40,7 +40,7 @@ public class ProximityInteractor : MonoBehaviour
 
     private void Update() // se podria cambiar a OnTick en un futuro para mejor performance
     {
-        if (targets.Count != 0)
+        if (isLookingForTarget && targets.Count != 0)
         {
             CheckClosestTarget();
             AttachInteractorVisuals(closestTarget);
@@ -82,6 +82,17 @@ public class ProximityInteractor : MonoBehaviour
         }
     }
 
+    private void LockTarget()
+    {
+        isLookingForTarget = false;
+    }
+
+    public void UnlockTarget()
+    {
+        isLookingForTarget = true;
+    }
+
+    /*/ DESCARTADO, AGARRE DE OBJETOS
     private void GrabClosestTarget()
     {
         if (targets.Count > 0)
@@ -99,13 +110,10 @@ public class ProximityInteractor : MonoBehaviour
         grabbedObject.transform.parent = null;
         grabbedObject = null;
     }
+    /*/
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            if (grabbedObject == null) GrabClosestTarget();
-            else DropGrabbedObject();
-        }
+        closestTarget.GetComponent<IInteractable>().OnInteract();
     }
 }
