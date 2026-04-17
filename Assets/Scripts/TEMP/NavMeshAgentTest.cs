@@ -8,6 +8,7 @@ public class NavMeshTest : MonoBehaviour
 
     private void Start()
     {
+        agent.updateRotation = false;
         agent.destination = goal.position;
     }
 }
