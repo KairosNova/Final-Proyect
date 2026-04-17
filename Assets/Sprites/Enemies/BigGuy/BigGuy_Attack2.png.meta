@@ -1,76 +1,91 @@
 fileFormatVersion: 2
-guid: 0a07e0c1770f1ee4cb5ae3559d7860ed
+guid: b11d898863ca33943ab71edd5c6053f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6035834646159567918
-    second: BigGuy_Attack2.1_0
+      213: -9110782123943618564
+    second: BigGuy_Attack2_0
   - first:
-      213: 2099407154876620387
-    second: BigGuy_Attack2.1_1
+      213: 3285283925659192478
+    second: BigGuy_Attack2_1
   - first:
-      213: 188434760707576763
-    second: BigGuy_Attack2.1_2
+      213: 685299821799859796
+    second: BigGuy_Attack2_2
   - first:
-      213: 4111299633072434531
-    second: BigGuy_Attack2.1_3
+      213: -159124111667662080
+    second: BigGuy_Attack2_3
   - first:
-      213: 8275278520717301182
-    second: BigGuy_Attack2.1_4
+      213: 5374689603214187750
+    second: BigGuy_Attack2_4
   - first:
-      213: -7183725694952373959
-    second: BigGuy_Attack2.1_5
+      213: 6652915632968405562
+    second: BigGuy_Attack2_5
   - first:
-      213: -3829560204439403147
-    second: BigGuy_Attack2.1_6
+      213: -1889005993587016732
+    second: BigGuy_Attack2_6
   - first:
-      213: -614175481581360922
-    second: BigGuy_Attack2.1_7
+      213: 3931858412346838235
+    second: BigGuy_Attack2_7
   - first:
-      213: -1197634913949095930
-    second: BigGuy_Attack2.1_8
+      213: 7885818981495213902
+    second: BigGuy_Attack2_8
   - first:
-      213: 1599282036907925429
-    second: BigGuy_Attack2.1_9
+      213: 6050647154929895604
+    second: BigGuy_Attack2_9
   - first:
-      213: 4903499749259372443
-    second: BigGuy_Attack2.1_10
+      213: 2388198531223331274
+    second: BigGuy_Attack2_10
   - first:
-      213: 3521106326743506636
-    second: BigGuy_Attack2.1_11
+      213: 5430877100335712778
+    second: BigGuy_Attack2_11
   - first:
-      213: -8996302551165040077
-    second: BigGuy_Attack2.1_12
+      213: 184061680798558621
+    second: BigGuy_Attack2_12
   - first:
-      213: -1113176187193081184
-    second: BigGuy_Attack2.1_13
+      213: -3399844232853528735
+    second: BigGuy_Attack2_13
   - first:
-      213: 4194054241801714815
-    second: BigGuy_Attack2.1_14
+      213: 4043252229497564739
+    second: BigGuy_Attack2_14
   - first:
-      213: -6738028351334786051
-    second: BigGuy_Attack2.1_15
+      213: -5508842824640419369
+    second: BigGuy_Attack2_15
   - first:
-      213: -6640473640319257577
-    second: BigGuy_Attack2.1_16
+      213: 8932056823263678495
+    second: BigGuy_Attack2_16
   - first:
-      213: -3163288950320125536
-    second: BigGuy_Attack2.1_17
+      213: -6256879280878498490
+    second: BigGuy_Attack2_17
   - first:
-      213: -6587149200491148933
-    second: BigGuy_Attack2.1_18
+      213: -8061461194008082424
+    second: BigGuy_Attack2_18
   - first:
-      213: 8445993493483756895
-    second: BigGuy_Attack2.1_19
+      213: -1188726153867413721
+    second: BigGuy_Attack2_19
   - first:
-      213: -6490164715073693156
-    second: BigGuy_Attack2.1_20
+      213: -5215866833442601993
+    second: BigGuy_Attack2_20
   - first:
-      213: -7175746300814986036
-    second: BigGuy_Attack2.1_21
+      213: -1656864713192856925
+    second: BigGuy_Attack2_21
   - first:
-      213: 4262796341181195198
-    second: BigGuy_Attack2.1_22
+      213: -3470832588906720248
+    second: BigGuy_Attack2_22
+  - first:
+      213: -2989692969591275568
+    second: BigGuy_Attack2_23
+  - first:
+      213: -8488312946903622385
+    second: BigGuy_Attack2_24
+  - first:
+      213: -4036711445306878180
+    second: BigGuy_Attack2_25
+  - first:
+      213: -2452224015161013629
+    second: BigGuy_Attack2_26
+  - first:
+      213: 2678677780738866767
+    second: BigGuy_Attack2_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -218,353 +233,441 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_0
+      name: BigGuy_Attack2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2c2657a1a793c350800000000000000
-      internalID: 6035834646159567918
+      spriteID: cf79c54edefff8180800000000000000
+      internalID: -9110782123943618564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_1
+      name: BigGuy_Attack2_1
       rect:
         serializedVersion: 2
         x: 128
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36e95592fa7922d10800000000000000
-      internalID: 2099407154876620387
+      spriteID: e9c873ff25ca79d20800000000000000
+      internalID: 3285283925659192478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_2
+      name: BigGuy_Attack2_2
       rect:
         serializedVersion: 2
         x: 256
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb39f4f9a647d9200800000000000000
-      internalID: 188434760707576763
+      spriteID: 456e40b9e8ca28900800000000000000
+      internalID: 685299821799859796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_3
+      name: BigGuy_Attack2_3
       rect:
         serializedVersion: 2
         x: 384
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36de972db354e0930800000000000000
-      internalID: 4111299633072434531
+      spriteID: 00379d8a67daacdf0800000000000000
+      internalID: -159124111667662080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_4
+      name: BigGuy_Attack2_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec1191c7bbb69a40800000000000000
+      internalID: 5374689603214187750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigGuy_Attack2_5
       rect:
         serializedVersion: 2
         x: 0
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb556c468f1b7d270800000000000000
-      internalID: 8275278520717301182
+      spriteID: a3299bff487e35c50800000000000000
+      internalID: 6652915632968405562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_5
+      name: BigGuy_Attack2_6
       rect:
         serializedVersion: 2
         x: 128
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 931848c9a874e4c90800000000000000
-      internalID: -7183725694952373959
+      spriteID: 4eb79a5ae07e8c5e0800000000000000
+      internalID: -1889005993587016732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_6
+      name: BigGuy_Attack2_7
       rect:
         serializedVersion: 2
         x: 256
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 575ca60b84baadac0800000000000000
-      internalID: -3829560204439403147
+      spriteID: bdc8017e464c09630800000000000000
+      internalID: 3931858412346838235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_7
+      name: BigGuy_Attack2_8
       rect:
         serializedVersion: 2
         x: 384
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e8a69e47a20a77f0800000000000000
-      internalID: -614175481581360922
+      spriteID: e4f0e03359e007d60800000000000000
+      internalID: 7885818981495213902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_8
+      name: BigGuy_Attack2_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b803da978738f350800000000000000
+      internalID: 6050647154929895604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigGuy_Attack2_10
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 608657f1465216fe0800000000000000
-      internalID: -1197634913949095930
+      spriteID: ac12da239e5942120800000000000000
+      internalID: 2388198531223331274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_9
+      name: BigGuy_Attack2_11
       rect:
         serializedVersion: 2
         x: 128
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bf5f890a8ac13610800000000000000
-      internalID: 1599282036907925429
+      spriteID: a0a4050e2f95e5b40800000000000000
+      internalID: 5430877100335712778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_10
+      name: BigGuy_Attack2_12
       rect:
         serializedVersion: 2
         x: 256
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9762d6ca0bbc0440800000000000000
-      internalID: 4903499749259372443
+      spriteID: d9962cc9f1bed8200800000000000000
+      internalID: 184061680798558621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_11
+      name: BigGuy_Attack2_13
       rect:
         serializedVersion: 2
         x: 384
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cce5ded6c8b7dd030800000000000000
-      internalID: 3521106326743506636
+      spriteID: 16fda11fea351d0d0800000000000000
+      internalID: -3399844232853528735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_12
+      name: BigGuy_Attack2_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e228c0b748c1830800000000000000
+      internalID: 4043252229497564739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigGuy_Attack2_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33a0ed18e76b62380800000000000000
-      internalID: -8996302551165040077
+      spriteID: 7d929d953a8ac83b0800000000000000
+      internalID: -5508842824640419369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_13
+      name: BigGuy_Attack2_16
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a2cee5d7243d80f0800000000000000
-      internalID: -1113176187193081184
+      spriteID: f105c305b5a05fb70800000000000000
+      internalID: 8932056823263678495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_14
+      name: BigGuy_Attack2_17
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7cbf43ac16443a30800000000000000
-      internalID: 4194054241801714815
+      spriteID: 64d4cb4c1791b29a0800000000000000
+      internalID: -6256879280878498490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack2.1_15
+      name: BigGuy_Attack2_18
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfbdd200ae6bd72a0800000000000000
-      internalID: -6738028351334786051
+      spriteID: 8084d8861cfef1090800000000000000
+      internalID: -8061461194008082424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigGuy_Attack2_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.72, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72734877cdbc08fe0800000000000000
+      internalID: -1188726153867413721
       vertices: []
       indices: 
       edges: []
@@ -573,7 +676,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 99ecc29175db1fd47af783aeda72c73a
+    spriteID: 2a08998c7a325bd4eae80a3f9c770423
     internalID: 0
     vertices: []
     indices: 
@@ -583,24 +686,28 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.7200000286102295,"y":0.12999999523162843},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BigGuy_Attack2.1_0: 6035834646159567918
-      BigGuy_Attack2.1_1: 2099407154876620387
-      BigGuy_Attack2.1_10: 4903499749259372443
-      BigGuy_Attack2.1_11: 3521106326743506636
-      BigGuy_Attack2.1_12: -8996302551165040077
-      BigGuy_Attack2.1_13: -1113176187193081184
-      BigGuy_Attack2.1_14: 4194054241801714815
-      BigGuy_Attack2.1_15: -6738028351334786051
-      BigGuy_Attack2.1_2: 188434760707576763
-      BigGuy_Attack2.1_3: 4111299633072434531
-      BigGuy_Attack2.1_4: 8275278520717301182
-      BigGuy_Attack2.1_5: -7183725694952373959
-      BigGuy_Attack2.1_6: -3829560204439403147
-      BigGuy_Attack2.1_7: -614175481581360922
-      BigGuy_Attack2.1_8: -1197634913949095930
-      BigGuy_Attack2.1_9: 1599282036907925429
+      BigGuy_Attack2_0: -9110782123943618564
+      BigGuy_Attack2_1: 3285283925659192478
+      BigGuy_Attack2_10: 2388198531223331274
+      BigGuy_Attack2_11: 5430877100335712778
+      BigGuy_Attack2_12: 184061680798558621
+      BigGuy_Attack2_13: -3399844232853528735
+      BigGuy_Attack2_14: 4043252229497564739
+      BigGuy_Attack2_15: -5508842824640419369
+      BigGuy_Attack2_16: 8932056823263678495
+      BigGuy_Attack2_17: -6256879280878498490
+      BigGuy_Attack2_18: -8061461194008082424
+      BigGuy_Attack2_19: -1188726153867413721
+      BigGuy_Attack2_2: 685299821799859796
+      BigGuy_Attack2_3: -159124111667662080
+      BigGuy_Attack2_4: 5374689603214187750
+      BigGuy_Attack2_5: 6652915632968405562
+      BigGuy_Attack2_6: -1889005993587016732
+      BigGuy_Attack2_7: 3931858412346838235
+      BigGuy_Attack2_8: 7885818981495213902
+      BigGuy_Attack2_9: 6050647154929895604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

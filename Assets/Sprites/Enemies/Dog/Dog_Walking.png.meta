@@ -1,49 +1,55 @@
 fileFormatVersion: 2
-guid: 3811edb58cb1dea4f8ad1f92b10f3389
+guid: 505c89038879c574d99cb6514932fdf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6283734471195774123
-    second: BigGuy_Attack_0
+      213: 6666358320907399656
+    second: Dog_Walking_0
   - first:
-      213: -7461414246615925263
-    second: BigGuy_Attack_1
+      213: 4345972416741415558
+    second: Dog_Walking_1
   - first:
-      213: 4717536457665616074
-    second: BigGuy_Attack_2
+      213: -7461943604836018523
+    second: Dog_Walking_2
   - first:
-      213: 8007929806006223282
-    second: BigGuy_Attack_3
+      213: -307942624751708594
+    second: Dog_Walking_3
   - first:
-      213: -6941745837878433847
-    second: BigGuy_Attack_4
+      213: 46960361348971167
+    second: Dog_Walking_4
   - first:
-      213: 888587714821084880
-    second: BigGuy_Attack_5
+      213: 6359303804302797806
+    second: Dog_Walking_5
   - first:
-      213: 7588032610997434510
-    second: BigGuy_Attack_6
+      213: -5353500361623815734
+    second: Dog_Walking_6
   - first:
-      213: -7695651427493384004
-    second: BigGuy_Attack_7
+      213: 8488038515137064321
+    second: Dog_Walking_7
   - first:
-      213: -2341454434196586097
-    second: BigGuy_Attack_8
+      213: -7057251392990473830
+    second: Dog_Walking_8
   - first:
-      213: -1015769486524011297
-    second: BigGuy_Attack_9
+      213: 2010150077072314617
+    second: Dog_Walking_9
   - first:
-      213: -1736728202021686042
-    second: BigGuy_Attack_10
+      213: 6110375179886284907
+    second: Dog_Walking_10
   - first:
-      213: -4081812479129974029
-    second: BigGuy_Attack_11
+      213: -2376592661110895823
+    second: Dog_Walking_11
   - first:
-      213: -2534764181359743155
-    second: BigGuy_Attack_12
+      213: 8496861565357930467
+    second: Dog_Walking_12
   - first:
-      213: -6798621484091866890
-    second: BigGuy_Attack_13
+      213: -3984454325262412823
+    second: Dog_Walking_13
+  - first:
+      213: -5060350811633485405
+    second: Dog_Walking_14
+  - first:
+      213: 54343341148838561
+    second: Dog_Walking_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -191,287 +197,353 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BigGuy_Attack_0
+      name: Dog_Walking_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 553bf758ac0bbc8a0800000000000000
-      internalID: -6283734471195774123
+      spriteID: 8e1b72fa299a38c50800000000000000
+      internalID: 6666358320907399656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_1
+      name: Dog_Walking_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fd3b64664bb37890800000000000000
-      internalID: -7461414246615925263
+      spriteID: 68a948713eeff4c30800000000000000
+      internalID: 4345972416741415558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_2
+      name: Dog_Walking_2
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac81d16e96e087140800000000000000
-      internalID: 4717536457665616074
+      spriteID: 5a650c393d9d17890800000000000000
+      internalID: -7461943604836018523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_3
+      name: Dog_Walking_3
       rect:
         serializedVersion: 2
-        x: 240
+        x: 288
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b183411bb1e12f60800000000000000
-      internalID: 8007929806006223282
+      spriteID: e46197870d7f9bbf0800000000000000
+      internalID: -307942624751708594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_4
+      name: Dog_Walking_4
       rect:
         serializedVersion: 2
-        x: 320
+        x: 384
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c7a53c70f6f9af90800000000000000
-      internalID: -6941745837878433847
+      spriteID: f9abab82336d6a000800000000000000
+      internalID: 46960361348971167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_5
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d6dfa591d5e45c00800000000000000
-      internalID: 888587714821084880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BigGuy_Attack_6
+      name: Dog_Walking_5
       rect:
         serializedVersion: 2
         x: 480
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e88f492e47b1e4960800000000000000
-      internalID: 7588032610997434510
+      spriteID: eeb2242fd19c04850800000000000000
+      internalID: 6359303804302797806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_7
+      name: Dog_Walking_6
       rect:
         serializedVersion: 2
-        x: 560
+        x: 576
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb0770dcccd833590800000000000000
-      internalID: -7695651427493384004
+      spriteID: ac9bc7009cb84b5b0800000000000000
+      internalID: -5353500361623815734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_8
+      name: Dog_Walking_7
       rect:
         serializedVersion: 2
-        x: 640
+        x: 672
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8103fff89b718fd0800000000000000
-      internalID: -2341454434196586097
+      spriteID: 18d2496de029bc570800000000000000
+      internalID: 8488038515137064321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_9
+      name: Dog_Walking_8
       rect:
         serializedVersion: 2
-        x: 720
+        x: 768
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdc2e06a80347e1f0800000000000000
-      internalID: -1015769486524011297
+      spriteID: a911c2ebf3b9f0e90800000000000000
+      internalID: -7057251392990473830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_10
+      name: Dog_Walking_9
       rect:
         serializedVersion: 2
-        x: 800
+        x: 864
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e4381fd6e6e5e7e0800000000000000
-      internalID: -1736728202021686042
+      spriteID: 9f09e1948dc75eb10800000000000000
+      internalID: 2010150077072314617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigGuy_Attack_11
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fa83b53d2d7a57c0800000000000000
-      internalID: -4081812479129974029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BigGuy_Attack_12
+      name: Dog_Walking_10
       rect:
         serializedVersion: 2
         x: 960
         y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4f2ba42865b2dcd0800000000000000
-      internalID: -2534764181359743155
+      spriteID: b605c791ad96cc450800000000000000
+      internalID: 6110375179886284907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Walking_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b4fa20195a40fd0800000000000000
+      internalID: -2376592661110895823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Walking_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e734dc439aeae570800000000000000
+      internalID: 8496861565357930467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Walking_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e317f6d6ef54b8c0800000000000000
+      internalID: -3984454325262412823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Walking_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9f9b96fb506c9b0800000000000000
+      internalID: -5060350811633485405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Walking_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa95191bf011c000800000000000000
+      internalID: 54343341148838561
       vertices: []
       indices: 
       edges: []
@@ -480,7 +552,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b6d6b6895df1cb04d9ac7fe1b47f4788
+    spriteID: 9cc3990d5be5d284095b213320f83514
     internalID: 0
     vertices: []
     indices: 
@@ -490,21 +562,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":80.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.23999999463558198},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BigGuy_Attack_0: -6283734471195774123
-      BigGuy_Attack_1: -7461414246615925263
-      BigGuy_Attack_10: -1736728202021686042
-      BigGuy_Attack_11: -4081812479129974029
-      BigGuy_Attack_12: -2534764181359743155
-      BigGuy_Attack_2: 4717536457665616074
-      BigGuy_Attack_3: 8007929806006223282
-      BigGuy_Attack_4: -6941745837878433847
-      BigGuy_Attack_5: 888587714821084880
-      BigGuy_Attack_6: 7588032610997434510
-      BigGuy_Attack_7: -7695651427493384004
-      BigGuy_Attack_8: -2341454434196586097
-      BigGuy_Attack_9: -1015769486524011297
+      Dog_Walking_0: 6666358320907399656
+      Dog_Walking_1: 4345972416741415558
+      Dog_Walking_10: 6110375179886284907
+      Dog_Walking_11: -2376592661110895823
+      Dog_Walking_12: 8496861565357930467
+      Dog_Walking_13: -3984454325262412823
+      Dog_Walking_14: -5060350811633485405
+      Dog_Walking_15: 54343341148838561
+      Dog_Walking_2: -7461943604836018523
+      Dog_Walking_3: -307942624751708594
+      Dog_Walking_4: 46960361348971167
+      Dog_Walking_5: 6359303804302797806
+      Dog_Walking_6: -5353500361623815734
+      Dog_Walking_7: 8488038515137064321
+      Dog_Walking_8: -7057251392990473830
+      Dog_Walking_9: 2010150077072314617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
