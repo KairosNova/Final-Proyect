@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Build 0.1.unity
     guid: e6709302fd61a434b825117f4db7f247
+  - enabled: 1
+    path: Assets/Scenes/OliviaTestScenes/OliviaUpperShipTest.unity
+    guid: 4a174b79ac5cf6f44b32a545657d742f
+  - enabled: 1
+    path: Assets/Scenes/OliviaTestScenes/OliviaLevelTemplate.unity
+    guid: 086c18cb2e66db94f8e8a3f685285209
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
