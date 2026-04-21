@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4654503879386664145}
   - component: {fileID: 6367742675712946581}
   - component: {fileID: 302616583112923444}
-  - component: {fileID: 1768034304181395343}
   - component: {fileID: 8906541704051168800}
   m_Layer: 3
   m_Name: BigGuy_Enemy
@@ -201,30 +200,6 @@ MonoBehaviour:
   detectionRange: 5
   hasDetectedPlayer: 0
   moveSpeed: 2
-  damage: 50
-  damageShield: 20
-  attackRange: 2
-  shieldRange: 0.8
-  attackWindup: 0.5
-  vulnerableDuration: 3
-  deathAnimationTime: 1.2
-  attackCooldown: 2
---- !u!114 &1768034304181395343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6567845570378610296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6491c007a4d904d942440c2e25559f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BigGuyBoss
-  currentState: 0
-  detectionRange: 5
-  hasDetectedPlayer: 0
-  moveSpeed: 3
   damage: 50
   damageShield: 20
   attackRange: 2

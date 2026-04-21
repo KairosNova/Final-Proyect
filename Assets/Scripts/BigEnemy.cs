@@ -19,7 +19,8 @@ public class BigEnemy : MonoBehaviour
 
     [Header("Ataque y Vulnerabilidad")]
     public float attackRange = 2f;// rango ataque 1
-    public float shieldRange = 0.8f;    // rango ataque 2 — muy cerca
+    public float shieldRange = 1.2f;    // rango ataque 2 — muy cerca
+  
     
     [Header("Tiempos")]
     public float attackWindup = 0.5f; // Tiempo que "carga" el golpe antes de darlo
@@ -35,6 +36,7 @@ public class BigEnemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private Rigidbody2D rb;
+    private int attackCount = 0;
 
     void Start()
     {
@@ -61,6 +63,8 @@ public class BigEnemy : MonoBehaviour
         // La Máquina de Estados: El enemigo decide qué hacer según su estado
         if (currentCooldown > 0)currentCooldown -= Time.deltaTime;
         float distance = Vector2.Distance(transform.position, player.position);
+        float distanceX = Mathf.Abs(player.position.x - transform.position.x);
+        
         if (!hasDetectedPlayer && distance <= detectionRange)
         {
             hasDetectedPlayer = true;
@@ -73,8 +77,9 @@ public class BigEnemy : MonoBehaviour
                 
                 if (hasDetectedPlayer)
                 {
-                    ChasePlayer(distance);
-                    CheckAttackRange(distance);
+                    ChasePlayer(distanceX);
+                    
+                    CheckAttackRange(distanceX);
                 }else
                 {
                     // Si no te ha visto, se asegura de estar en Idle
@@ -98,7 +103,8 @@ public class BigEnemy : MonoBehaviour
         // Solo se mueve si no está pegado al jugador
         if (distance > 0.5f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            Vector3 target = new Vector3(player.position.x, transform.position.y, transform.position.z);
+            transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);;
             if (anim != null) anim.SetFloat("Speed", moveSpeed); // Enviamos la velocidad al Animator
         }else
         {
@@ -121,20 +127,23 @@ public class BigEnemy : MonoBehaviour
         if (currentState != BossState.Chasing) return;
         if (isAttacking) return;  
         if (currentCooldown > 0) return;
+        if (attackCount > 0) return;
         
         // Si está muy cerca → ataque 2 escudo, no deja vulnerable
         if (distance <= shieldRange)
         {
+            isAttacking = true;
             StartCoroutine(ShieldAttackSequence());
         }else if (distance <= attackRange)
         {
+            isAttacking = true;
             StartCoroutine(AttackSequence());
         }
     }
     // ATAQUE 1 — fuerte, deja vulnerable
     private IEnumerator AttackSequence()
     {
-        isAttacking = true;
+        
         // Cambiamos de estado: Deja de perseguir
         currentState = BossState.Attacking;
         currentCooldown = attackCooldown;
@@ -151,18 +160,20 @@ public class BigEnemy : MonoBehaviour
         // 2. Dar el golpe (Detección por círculo invisible)
         spriteRenderer.color = Color.white;
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
+        bool alreadyHit = false;
         foreach (Collider2D hit in hits)
         {
-            if (hit.CompareTag("Player"))
+            if (alreadyHit) break;
+            if (!hit.CompareTag("Player")) continue;
+            
+            Health playerHealth = hit.transform.root.GetComponent<Health>();
+            if (playerHealth != null)
             {
-                Health playerHealth = hit.GetComponent<Health>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damage);
-                    Debug.Log("¡El Big Guy te aplastó!");
-                    break;
-                }
+                playerHealth.TakeDamage(damage);
+                Debug.Log("¡El Big Guy te aplastó!");
+                alreadyHit = true;
             }
+            
         }
 
         // 3. Inmediatamente después de pegar, se vuelve vulnerable
@@ -191,13 +202,14 @@ public class BigEnemy : MonoBehaviour
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(damageShield);
-                    Debug.Log("Ataque 2 — escudo");
                     break;
                 }
             }
         }
         yield return new WaitForSeconds(0.5f);// Pequeña pausa para recuperar postura
         currentState = BossState.Chasing;
+        isAttacking = false;
+        attackCount = 0;
     }
 
 
