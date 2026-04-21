@@ -17,7 +17,7 @@ public class FlashLightVisuals : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        StartCoroutine(FlashLightImpactVisual());
+        if (context.started) StartCoroutine(FlashLightImpactVisual());
     }
 
     private IEnumerator FlashLightImpactVisual()
