@@ -29,7 +29,6 @@ public class BigEnemy : MonoBehaviour
     private float currentCooldown = 0f;
 
     // Referencias internas
-    private bool isAttacking = false; 
     private Transform player;
     private Health myHealth;
     private SpriteRenderer spriteRenderer;
@@ -118,8 +117,6 @@ public class BigEnemy : MonoBehaviour
 
     private void CheckAttackRange(float distance)
     {
-        if (currentState != BossState.Chasing) return;
-        if (isAttacking) return;  
         if (currentCooldown > 0) return;
         
         // Si está muy cerca → ataque 2 escudo, no deja vulnerable
@@ -134,7 +131,6 @@ public class BigEnemy : MonoBehaviour
     // ATAQUE 1 — fuerte, deja vulnerable
     private IEnumerator AttackSequence()
     {
-        isAttacking = true;
         // Cambiamos de estado: Deja de perseguir
         currentState = BossState.Attacking;
         currentCooldown = attackCooldown;
@@ -160,7 +156,6 @@ public class BigEnemy : MonoBehaviour
                 {
                     playerHealth.TakeDamage(damage);
                     Debug.Log("¡El Big Guy te aplastó!");
-                    break;
                 }
             }
         }
@@ -192,7 +187,6 @@ public class BigEnemy : MonoBehaviour
                 {
                     playerHealth.TakeDamage(damageShield);
                     Debug.Log("Ataque 2 — escudo");
-                    break;
                 }
             }
         }
@@ -217,7 +211,6 @@ public class BigEnemy : MonoBehaviour
         spriteRenderer.color = Color.white;
         if (myHealth != null) myHealth.SetInvulnerable(true);
         currentState = BossState.Chasing;
-        isAttacking = false;
     }
     public void OnDeath()
     {

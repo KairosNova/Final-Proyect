@@ -189,21 +189,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 372770108835126222, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6691042233733971962, guid: 439f565e572d93441a23650917fce1e7, type: 3}
-    - target: {fileID: 2013134938183008253, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2262235783917510581, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2262235783917510581, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2612514683944322841, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_Name
@@ -268,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 161065348723698200, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 161065348723698200, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -322,10 +314,6 @@ PrefabInstance:
     - target: {fileID: 897601582938522605, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
       propertyPath: m_Name
       value: DogEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 897601582938522605, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3017375158769112189, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
       propertyPath: m_LocalPosition.x
