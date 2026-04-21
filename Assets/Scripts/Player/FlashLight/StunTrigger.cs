@@ -12,8 +12,11 @@ public class StunTrigger : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        triggerCollider.enabled = true;
-        Invoke(nameof(DisableTrigger), stunTime);
+        if (context.started)
+        {
+            triggerCollider.enabled = true;
+            Invoke(nameof(DisableTrigger), stunTime);
+        }
     }
 
     private void DisableTrigger()
@@ -23,6 +26,10 @@ public class StunTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collision.CompareTag("Enemy")) return;
+
+        Debug.Log("DENTRO STUN!");
+
         stunnedEntity = collision.GetComponentInParent<IStunnable>();
 
         stunnedEntity.OnStun();

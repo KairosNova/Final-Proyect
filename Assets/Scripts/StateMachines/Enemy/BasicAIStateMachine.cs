@@ -25,7 +25,7 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
     private Transform target;
 
     [Header("STUN")]
-    private float stunTime;
+    [SerializeField] private float stunTime;
 
     private void Start()
     {
@@ -112,6 +112,11 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
     {
         if (target == this.target) return;
         this.target = target;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        agent.speed = speed;
     }
 
     public void OnStun()
