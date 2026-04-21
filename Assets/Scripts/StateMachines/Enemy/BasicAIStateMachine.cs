@@ -116,11 +116,13 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
 
     public void OnStun()
     {
+        Debug.Log("Stuneado");
         agent.isStopped = true;
         Invoke(nameof(DeStun), stunTime);
     }
     public void DeStun()
     {
+        Debug.Log("DESStuneado");
         agent.isStopped = false;
     }
 }
