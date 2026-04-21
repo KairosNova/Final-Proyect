@@ -8,7 +8,7 @@ public enum AgentState
     FollowingTarget // Siguiendo al objetivo
 }
 
-public class AgentMovement : MonoBehaviour
+public class BasicAIStateMachine : MonoBehaviour, IStunnable
 {
     [SerializeField] private AgentState state;
     [SerializeField] private NavMeshAgent agent;
@@ -21,22 +21,25 @@ public class AgentMovement : MonoBehaviour
 
     [Header("TARGET FOLLOWING")]
     [SerializeField] private float followingCheckRate;
+    //[SerializeField] private Transform decoytarget;
     private Transform target;
-    private Vector3 homePosition;
+
+    [Header("STUN")]
+    private float stunTime;
 
     private void Start()
     {
         agent.updateRotation = false;
-        StartCurrentState();
+        target = GameObject.FindWithTag("Player").transform;
 
-        if (!agent.isOnNavMesh)
+        NavMeshHit navMeshHit;
+        if (NavMesh.SamplePosition(transform.position, out navMeshHit, 100, -1))
         {
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(transform.position, out hit, 5f, NavMesh.AllAreas))
-            {
-                agent.Warp(hit.position);
-            }
+            transform.position = navMeshHit.position;
         }
+
+        //Invoke(nameof(StartCurrentState), 2f);
+
     }
 
     public void SetState(AgentState state)
@@ -67,6 +70,7 @@ public class AgentMovement : MonoBehaviour
                 InvokeRepeating(nameof(FollowTarget), 0f, followingCheckRate);
             break;
         }
+        Debug.Log("Estado Iniciado");
     }
 
     private void EndCurrentState()
@@ -97,11 +101,26 @@ public class AgentMovement : MonoBehaviour
 
     private void FollowTarget()
     {
-        agent.SetDestination(target.position);
+        NavMeshHit navMeshHit;
+        if (NavMesh.SamplePosition(target.position, out navMeshHit, 100, -1))
+        {
+            agent.SetDestination(navMeshHit.position);
+        }
     }
 
     public void SetTarget(Transform target)
     {
+        if (target == this.target) return;
         this.target = target;
+    }
+
+    public void OnStun()
+    {
+        agent.isStopped = true;
+        Invoke(nameof(DeStun), stunTime);
+    }
+    public void DeStun()
+    {
+        agent.isStopped = false;
     }
 }

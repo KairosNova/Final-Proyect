@@ -14,15 +14,17 @@ public class EnemyBase : MonoBehaviour
     protected bool hasDetectedPlayer = false;
     protected Vector2 moveDirection;
 
-    [SerializeField] protected AgentMovement agentMovement;
+    [SerializeField] protected BasicAIStateMachine agentMovement;
 
     [Header("Giro")]
     protected bool facingRight = true;
     protected Rigidbody2D rb;
+
     [Header("Patrullaje (Waypoints)")]
     public Transform[] waypoints; // Puntos por los que rondará
     public float patrolSpeed = 2f; // Velocidad al rondar (suele ser más lenta que perseguir)
     private int currentWaypointIndex = 0;
+
     protected virtual void Awake()
     {
         health = GetComponent<Health>();
@@ -42,8 +44,10 @@ public class EnemyBase : MonoBehaviour
             ChasePlayer();
         }
     }
+
     protected virtual void Patrol()
     {
+        Debug.Log("Patrullando");
         if (waypoints == null || waypoints.Length == 0) return;
 
         Transform target = waypoints[currentWaypointIndex];
@@ -88,9 +92,8 @@ public class EnemyBase : MonoBehaviour
             agentMovement.SetTarget(player);
             Debug.Log($"{gameObject.name} detectó al jugador");
         } 
-        
-
     }
+
     protected virtual void ChasePlayer()
     {
         if (player == null) 
@@ -112,7 +115,6 @@ public class EnemyBase : MonoBehaviour
                 Flip();
             }
         }
-
     }
 
     protected virtual void Flip()

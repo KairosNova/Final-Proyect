@@ -36,4 +36,6 @@ public class DogEnemy : EnemyBase
         if (anim != null) anim.SetTrigger("Die");
         Destroy(gameObject);
     }
+
+
 }
