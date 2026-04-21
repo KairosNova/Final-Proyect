@@ -114,6 +114,11 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
         this.target = target;
     }
 
+    public void SetSpeed(float speed)
+    {
+        agent.speed = speed;
+    }
+
     public void OnStun()
     {
         Debug.Log("Stuneado");

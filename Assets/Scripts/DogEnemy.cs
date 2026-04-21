@@ -10,9 +10,10 @@ public class DogEnemy : EnemyBase
         base.Awake();
         anim = GetComponent<Animator>();
     }
-     protected override void Patrol()
+    protected override void Patrol()
     {
         base.Patrol();
+        agentMovement.SetSpeed(patrolSpeed);
         if (anim != null) anim.SetFloat("Speed", patrolSpeed);
     }
 
@@ -20,6 +21,7 @@ public class DogEnemy : EnemyBase
     protected override void ChasePlayer()
     {
         base.ChasePlayer();
+        agentMovement.SetSpeed(moveSpeed);
         if (anim != null) anim.SetFloat("Speed", moveSpeed);
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,6 +29,7 @@ public class DogEnemy : EnemyBase
         if (collision.gameObject.CompareTag("Player"))
         {
             playerHealth.TakeDamage(damage);
+            agentMovement.SetState(AgentState.Static);
             if (anim != null) anim.SetTrigger("Attack");
             Destroy(gameObject, 1f);
         }
