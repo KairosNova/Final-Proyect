@@ -5,9 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
-  - PlayerInteractable
-  - Background
-  - Foreground
   layers:
   - Default
   - TransparentFX
@@ -44,21 +41,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: background
-    uniqueID: 3809771891
-    locked: 0
-  - name: foreground
-    uniqueID: 3824875515
-    locked: 0
-  - name: InnerWall
-    uniqueID: 1513603151
-    locked: 0
-  - name: player
-    uniqueID: 3824900193
-    locked: 0
-  - name: InnerWallLapping
-    uniqueID: 39936979
     locked: 0
   m_RenderingLayers:
   - Default
