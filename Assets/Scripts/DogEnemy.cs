@@ -28,7 +28,7 @@ public class DogEnemy : EnemyBase
         {
             playerHealth.TakeDamage(damage);
             if (anim != null) anim.SetTrigger("Attack");
-            Destroy(gameObject);
+            Destroy(gameObject, 1f);
         }
     }
     public override void OnDeath()

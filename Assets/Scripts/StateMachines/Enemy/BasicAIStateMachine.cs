@@ -25,7 +25,7 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
     private Transform target;
 
     [Header("STUN")]
-    private float stunTime;
+    [SerializeField] private float stunTime;
 
     private void Start()
     {

@@ -12,6 +12,8 @@ public class LifebarUI : MonoBehaviour
 
     private void UpdateBar(float percentage)
     {
+        Debug.Log("Barra de vida actualizada al " + percentage + "%");
+
         if (percentage > 1f) percentage = 1f;
         if (percentage < 0f) percentage = 0f;
 
