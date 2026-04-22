@@ -21,13 +21,15 @@ public class PauseMenu : MonoBehaviour
 
     private void Pause()
     {
+        Time.timeScale = 0f;
         isPaused = true;
         gameObject.SetActive(true);
     }
 
     private void Unpause()
     {
+        Time.timeScale = 1f;
         isPaused = false;
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
 }
