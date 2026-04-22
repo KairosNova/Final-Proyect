@@ -8,10 +8,13 @@ public class PlayerShoot : MonoBehaviour
     private PlayerAim playerAim;
     [SerializeField]float range = 10f;
     [SerializeField] float fireDelay = 1.5f;
+    [SerializeField] float movementLockTime = 0.4f; // El tiempo que dura el retroceso
     [SerializeField] int damage = 100;
     [SerializeField] private LayerMask enemyLayer;
     private bool canShoot = true;
+    public bool isShooting = false;
     private Animator animator;
+
    
     void Awake()
     {
@@ -46,9 +49,11 @@ public class PlayerShoot : MonoBehaviour
     IEnumerator ShootCooldown()
     {
         canShoot = false;
+        isShooting = true;
         animator.SetTrigger("Shoot");
-        yield return new WaitForSeconds(fireDelay);
-        
+        yield return new WaitForSeconds(movementLockTime);
+        isShooting = false;
+        yield return new WaitForSeconds(fireDelay - movementLockTime);
         canShoot = true;
     }
 }
