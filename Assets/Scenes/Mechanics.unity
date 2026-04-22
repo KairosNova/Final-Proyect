@@ -294,11 +294,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 302616583112923444, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 302616583112923444, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
+      propertyPath: shieldRange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6567845570378610296, guid: 71fe0da60e840b744800a873898da1a8, type: 3}
       propertyPath: m_Name
       value: BigGuy_Enemy_Static
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

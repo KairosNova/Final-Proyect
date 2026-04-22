@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private UnityEvent onDeath; 
+    [SerializeField] private UnityEvent onDamage;
+
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private float currentHealth;
     public float CurrentHealth => currentHealth;
@@ -22,7 +26,7 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(int damage)
     {
-        if(IsDead)
+        if (IsDead)
         {
             return;
         }
@@ -30,12 +34,16 @@ public class Health : MonoBehaviour
         {
             return;
         }
+
+        onDamage?.Invoke();
+
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
         Debug.Log($"{gameObject.name} recibió {damage} daño. HP: {currentHealth}/{maxHealth}");
         if (currentHealth <= 0)
         {
-            Death();
+            Death(); 
+            onDeath?.Invoke();
         }
         
     }

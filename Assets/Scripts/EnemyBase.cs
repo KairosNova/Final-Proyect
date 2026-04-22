@@ -33,7 +33,8 @@ public class EnemyBase : MonoBehaviour
         {
             Patrol();
             TryDetectPlayer();
-        }else
+        }
+        else
         {
             ChasePlayer();
         }
