@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae71ddb5661a04488c55d44776f6759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAim
+  aimDirection: {x: 0, y: 0}
+  isAiming: 0
 --- !u!114 &824465832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +239,7 @@ SpriteRenderer:
   m_Size: {x: 0.6875, y: 0.984375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &824465834
 Transform:

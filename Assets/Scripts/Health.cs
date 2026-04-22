@@ -1,45 +1,56 @@
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private UnityEvent onDeath; 
+    [SerializeField] private UnityEvent onDamage;
+
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private float currentHealth;
     public float CurrentHealth => currentHealth;
     public float MaxHealth => maxHealth;
     public bool IsDead => currentHealth <= 0;
     public float HealthPercent => (float)currentHealth / maxHealth;
+    public bool isInvulnerable = false;
     
     void Awake()
     {
         currentHealth = maxHealth;
     }
-
-    public void Initialize(int hp)
+    public void SetInvulnerable(bool invulnerable)
     {
-        maxHealth = hp;
-        currentHealth = hp;
+        isInvulnerable = invulnerable;
     }
 
     public virtual void TakeDamage(int damage)
     {
-        if(IsDead)
+        if (IsDead)
         {
             return;
         }
+        if (isInvulnerable)
+        {
+            return;
+        }
+
+        onDamage?.Invoke();
+
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
         Debug.Log($"{gameObject.name} recibió {damage} daño. HP: {currentHealth}/{maxHealth}");
-        if (IsDead)
+        if (currentHealth <= 0)
         {
-            OnDeath();
+            Death(); 
+            onDeath?.Invoke();
         }
+        
     }
     
-    protected virtual void OnDeath()
+    protected virtual void Death()
     {
         Debug.Log($"{gameObject.name} murió");
-        GetComponent<EnemyBase>()?.OnDeath();
+        SendMessage("OnDeath", SendMessageOptions.DontRequireReceiver);
     }
 }
