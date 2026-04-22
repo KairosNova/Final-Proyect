@@ -7073,7 +7073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7423556338216878603, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: orthographic size
-      value: 2.8125
+      value: 5.125
       objectReference: {fileID: 0}
     - target: {fileID: 8123320138558053840, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7219,7 +7219,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 01703fd8f5a7101499484e6c4cd573e2, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 23f85d4b4bdec0148aa92d855976434d, type: 2}
 --- !u!1 &1345914708
 GameObject:
   m_ObjectHideFlags: 0
