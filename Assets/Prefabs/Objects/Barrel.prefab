@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9204976398814825581}
   - component: {fileID: 1819119493743212022}
   - component: {fileID: 1590702615785974802}
+  - component: {fileID: 8577902655207867972}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -129,3 +130,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.4}
   m_Size: {x: 0.6, y: 0.33}
   m_Direction: 1
+--- !u!114 &8577902655207867972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056063698829328196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NavMeshPlus::NavMeshPlus.Components.NavMeshModifier
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
