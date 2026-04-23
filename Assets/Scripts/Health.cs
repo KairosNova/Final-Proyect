@@ -7,8 +7,8 @@ public class Health : MonoBehaviour
     [SerializeField] private UnityEvent onDeath; 
     [SerializeField] private UnityEvent onDamage;
 
-    [SerializeField] private float maxHealth = 100;
-    [SerializeField] private float currentHealth;
+    [SerializeField] protected float maxHealth = 100;
+    [SerializeField] protected float currentHealth;
     public float CurrentHealth => currentHealth;
     public float MaxHealth => maxHealth;
     public bool IsDead => currentHealth <= 0;
