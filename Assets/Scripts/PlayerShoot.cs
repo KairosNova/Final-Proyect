@@ -11,6 +11,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] float movementLockTime = 0.4f; // El tiempo que dura el retroceso
     [SerializeField] int damage = 100;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private float tracerDuration = 0.01f;
     private bool canShoot = true;
     public bool isShooting = false;
     private Animator animator;
@@ -20,6 +22,7 @@ public class PlayerShoot : MonoBehaviour
     {
         playerAim = GetComponent<PlayerAim>();
         animator = GetComponentInChildren<Animator>();
+        
     }
 
     void Update()
@@ -44,7 +47,17 @@ public class PlayerShoot : MonoBehaviour
         }
         
         StartCoroutine(ShootCooldown());
+        Vector2 endPoint = hit.collider != null ? hit.point : (Vector2)firePoint.position + (direction * range);
+        StartCoroutine(ShowTracer(firePoint.position, endPoint));
         
+    }
+    IEnumerator ShowTracer(Vector3 start, Vector3 end)
+    {
+        lineRenderer.enabled = true;
+        lineRenderer.SetPosition(0, start);
+        lineRenderer.SetPosition(1, end);
+        yield return new WaitForSeconds(tracerDuration);
+        lineRenderer.enabled = false;
     }
     IEnumerator ShootCooldown()
     {

@@ -77,7 +77,7 @@ public class BigEnemy : MonoBehaviour
                 
                 if (hasDetectedPlayer)
                 {
-                    ChasePlayer(distanceX);
+                    ChasePlayer(distance);
                     
                     CheckAttackRange(distanceX);
                 }else
@@ -103,8 +103,7 @@ public class BigEnemy : MonoBehaviour
         // Solo se mueve si no está pegado al jugador
         if (distance > 0.5f)
         {
-            Vector3 target = new Vector3(player.position.x, transform.position.y, transform.position.z);
-            transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);;
+            transform.position = Vector2.MoveTowards(transform.position,player.position, moveSpeed * Time.deltaTime);
             if (anim != null) anim.SetFloat("Speed", moveSpeed); // Enviamos la velocidad al Animator
         }else
         {
