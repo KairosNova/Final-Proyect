@@ -8,6 +8,12 @@ public class PlayerHealth : Health
     public static event Action<float> onHealthPercentageChanged;
     public void Start()
     {
+        
+        
+    }
+
+    public void OnEnable()
+    {
         if (playerData != null)
         {
             this.maxHealth = playerData.maxHealth;
@@ -15,7 +21,6 @@ public class PlayerHealth : Health
             // Actualizamos la UI inmediatamente al cargar la escena
             onHealthPercentageChanged?.Invoke(this.currentHealth / this.maxHealth);
         }
-        
     }
 
     public override void TakeDamage(int damage)
