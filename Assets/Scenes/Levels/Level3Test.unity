@@ -7139,17 +7139,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 372770108835126222, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2612514683944322841, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4120791136524282969, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5203528150837550722, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7190,14 +7182,6 @@ PrefabInstance:
     - target: {fileID: 5203528150837550722, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616198860120795400, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616198860120795400, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
-      propertyPath: sprintSpeed
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
