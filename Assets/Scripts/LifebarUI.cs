@@ -5,9 +5,14 @@ public class LifebarUI : MonoBehaviour
 {
     [SerializeField] private Image barFillImage;
 
-    private void Start()
+    private void OnEnable()
     {
         PlayerHealth.onHealthPercentageChanged += UpdateBar;
+    }
+
+    private void OnDisable()
+    {
+        PlayerHealth.onHealthPercentageChanged -= UpdateBar;
     }
 
     private void UpdateBar(float percentage)
