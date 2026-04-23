@@ -6,10 +6,15 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Vector3 normalSize;
     public Vector3 hoverSize;
 
-    void Start()
+    void Awake()
     {
         normalSize = transform.localScale;
         hoverSize = normalSize * 1.1f;
+    }
+
+    public void OnEnable()
+    {
+        transform.localScale = normalSize;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

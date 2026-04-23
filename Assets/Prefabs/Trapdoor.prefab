@@ -107,7 +107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextSceneInteractable
   scenes:
-  - Escena1
+  - 
+  transitionType: 0
+  transitionTime: 0
 --- !u!50 &6398481613174783747
 Rigidbody2D:
   serializedVersion: 5
