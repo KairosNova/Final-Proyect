@@ -7042,12 +7042,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3369594838427045396, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.18840575
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369594838427045396, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369594838427045396, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3810174187187485813, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1915233774}
     - target: {fileID: 4120791136524282969, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325905270313601457, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+      propertyPath: movementLockTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5203528150837550722, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}

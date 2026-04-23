@@ -25,7 +25,8 @@ public class PlayerAim : MonoBehaviour
             Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
             Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, mainCamera.nearClipPlane));
             mouseWorldPosition.z = 0f;
-            Vector3 direction = mouseWorldPosition - transform.position;
+            Vector3 aimOrigin = arms != null ? arms.position : transform.position;
+            Vector3 direction = mouseWorldPosition - aimOrigin;
             aimDirection = new Vector2(direction.x, direction.y).normalized;
            
             Debug.DrawRay(transform.position, (Vector3)aimDirection * 2f, Color.green);
