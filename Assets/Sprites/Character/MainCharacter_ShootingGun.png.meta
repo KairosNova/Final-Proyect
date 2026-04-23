@@ -72,7 +72,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -184,7 +184,7 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,7 +206,7 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,7 +228,7 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: MainCharacter_ShootingGun_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 289
         y: 0
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -272,7 +272,7 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -289,12 +289,12 @@ TextureImporter:
       name: MainCharacter_ShootingGun_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 479
         y: 0
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -311,12 +311,12 @@ TextureImporter:
       name: MainCharacter_ShootingGun_6
       rect:
         serializedVersion: 2
-        x: 576
+        x: 575
         y: 0
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -333,12 +333,12 @@ TextureImporter:
       name: MainCharacter_ShootingGun_7
       rect:
         serializedVersion: 2
-        x: 672
+        x: 671
         y: 0
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -355,12 +355,12 @@ TextureImporter:
       name: MainCharacter_ShootingGun_8
       rect:
         serializedVersion: 2
-        x: 768
+        x: 767
         y: 0
         width: 96
         height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.424, y: 0.605}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

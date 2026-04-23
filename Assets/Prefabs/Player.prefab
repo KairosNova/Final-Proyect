@@ -219,6 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8347296398659620541}
   - component: {fileID: 7107890047364830769}
+  - component: {fileID: 7526098294983503212}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -235,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 1226897211775500459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: -0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -300,6 +301,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &7526098294983503212
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226897211775500459}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fb654218f234ba40bcde320b6d67683, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1316069330151681590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,7 +5309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8476000322701682846
 Transform:
   m_ObjectHideFlags: 0
@@ -5466,7 +5489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2612514683944322841}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5493,7 +5516,7 @@ MonoBehaviour:
   aimDirection: {x: 0, y: 0}
   isAiming: 0
   torso: {fileID: 8347296398659620541}
-  arms: {fileID: 7656288870950612477}
+  arms: {fileID: 2273662572955066425}
   baseSprite: {fileID: 7005865793730630337}
   maxArmsAngle: 15
 --- !u!114 &7826858404507802527
@@ -5696,17 +5719,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   firePoint: {fileID: 1100077250301824378}
+  armsAnimator: {fileID: 6232091968382376300}
+  lineRenderer: {fileID: 3918646347620212474}
   range: 10
   fireDelay: 2
-  movementLockTime: 0.4
+  movementLockTime: 0.8
   damage: 100
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  lineRenderer: {fileID: 3369594838427045396}
   tracerDuration: 0.01
   isShooting: 0
-  armsAnimator: {fileID: 0}
 --- !u!61 &6165974192244092441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5808,14 +5831,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100077250301824378}
-  - component: {fileID: 3369594838427045396}
+  - component: {fileID: 3918646347620212474}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1100077250301824378
 Transform:
   m_ObjectHideFlags: 0
@@ -5825,13 +5848,13 @@ Transform:
   m_GameObject: {fileID: 2681042776397670492}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.989, y: 0.071, z: 0}
+  m_LocalPosition: {x: 0.997, y: 0.099, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7656288870950612477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &3369594838427045396
+--- !u!120 &3918646347620212474
 LineRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -5856,7 +5879,8 @@ LineRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 2100000, guid: fb21a4739984f3d44a6f76eec191ac48, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5902,7 +5926,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.41940188, g: 0.9622642, b: 0.5217401, a: 1}
+      key0: {r: 0.34528297, g: 1, b: 0.50987756, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5910,7 +5934,7 @@ LineRenderer:
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
+      ctime0: 18273
       ctime1: 65535
       ctime2: 0
       ctime3: 0
@@ -6015,6 +6039,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4099279175122568729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2273662572955066425}
+  m_Layer: 0
+  m_Name: Arms_Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2273662572955066425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099279175122568729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7656288870950612477}
+  m_Father: {fileID: 6889210709639422839}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4890067093743017907
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,7 +6102,7 @@ Transform:
   m_Children:
   - {fileID: 2262235783917510581}
   - {fileID: 8347296398659620541}
-  - {fileID: 7656288870950612477}
+  - {fileID: 2273662572955066425}
   m_Father: {fileID: 5203528150837550722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4927292227973293933
@@ -6059,13 +6115,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7656288870950612477}
   - component: {fileID: 2051360677177685510}
+  - component: {fileID: 6232091968382376300}
   m_Layer: 0
   m_Name: Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7656288870950612477
 Transform:
   m_ObjectHideFlags: 0
@@ -6075,12 +6132,12 @@ Transform:
   m_GameObject: {fileID: 4927292227973293933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.379, z: 0}
+  m_LocalPosition: {x: -0.05, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1100077250301824378}
-  m_Father: {fileID: 6889210709639422839}
+  m_Father: {fileID: 2273662572955066425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2051360677177685510
 SpriteRenderer:
@@ -6141,6 +6198,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &6232091968382376300
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927292227973293933}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31db3597a3d76f34bb4612037687b6f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5906780805352165936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6345,7 +6424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5735884688025117918
 Transform:
   m_ObjectHideFlags: 0
@@ -6607,7 +6686,7 @@ Transform:
   m_GameObject: {fileID: 7005865793730630337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.028, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
