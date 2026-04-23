@@ -34,12 +34,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = characterInput.actions["Move"].ReadValue<Vector2>();
-        if (playerShoot != null && playerShoot.isShooting)
+        if ((playerShoot != null && playerShoot.isShooting)|| (playerAim != null && playerAim.isAiming))
         {
             moveInput = Vector2.zero;
+            isSprinting = false;
+        }else
+        {
+            isSprinting = Keyboard.current.leftShiftKey.isPressed && moveInput.magnitude > 0;
         }
-        isSprinting = Keyboard.current.leftShiftKey.isPressed && moveInput.magnitude > 0;
-        if (playerAim == null) return;
         if (characterAnimator != null)
         {
             characterAnimator.SetFloat("moveX" ,moveInput.magnitude);
@@ -55,6 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (moveInput == Vector2.zero)
+        {
+            characterRigidbody2D.linearVelocity = Vector2.zero;
+            return;
+        }
         float currentSpeed = isSprinting ? sprintSpeed : speed;
         characterRigidbody2D.linearVelocity = moveInput * currentSpeed;
     }

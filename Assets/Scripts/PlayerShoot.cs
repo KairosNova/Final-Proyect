@@ -15,13 +15,13 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float tracerDuration = 0.01f;
     private bool canShoot = true;
     public bool isShooting = false;
-    private Animator animator;
+    [SerializeField] private Animator armsAnimator;
 
    
     void Awake()
     {
         playerAim = GetComponent<PlayerAim>();
-        animator = GetComponentInChildren<Animator>();
+        armsAnimator = GetComponentInChildren<Animator>();
         
     }
 
@@ -63,7 +63,7 @@ public class PlayerShoot : MonoBehaviour
     {
         canShoot = false;
         isShooting = true;
-        animator.SetTrigger("Shoot");
+        if (armsAnimator != null) armsAnimator.SetTrigger("Shoot");
         yield return new WaitForSeconds(movementLockTime);
         isShooting = false;
         yield return new WaitForSeconds(fireDelay - movementLockTime);
