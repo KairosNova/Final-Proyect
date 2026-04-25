@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D characterRigidbody2D;
     Animator characterAnimator;
     PlayerAim playerAim;
+    PlayerShoot playerShoot;
     
     Vector2 moveInput;
     public float speed = 5.0f;
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         characterInput = GetComponent<PlayerInput>();
         playerAim = GetComponent<PlayerAim>();
         characterAnimator = GetComponentInChildren<Animator>();
-     
+        playerShoot = GetComponent<PlayerShoot>();
        
         characterRigidbody2D.gravityScale = 0f;
         characterRigidbody2D.freezeRotation = true; 
@@ -33,8 +34,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = characterInput.actions["Move"].ReadValue<Vector2>();
-        isSprinting = Keyboard.current.leftShiftKey.isPressed && moveInput.magnitude > 0;
-        if (playerAim == null) return;
+        if ((playerShoot != null && playerShoot.isShooting)|| (playerAim != null && playerAim.isAiming))
+        {
+            moveInput = Vector2.zero;
+            isSprinting = false;
+        }else
+        {
+            isSprinting = Keyboard.current.leftShiftKey.isPressed && moveInput.magnitude > 0;
+        }
         if (characterAnimator != null)
         {
             characterAnimator.SetFloat("moveX" ,moveInput.magnitude);
@@ -50,6 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (moveInput == Vector2.zero)
+        {
+            characterRigidbody2D.linearVelocity = Vector2.zero;
+            return;
+        }
         float currentSpeed = isSprinting ? sprintSpeed : speed;
         characterRigidbody2D.linearVelocity = moveInput * currentSpeed;
     }

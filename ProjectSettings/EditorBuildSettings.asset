@@ -8,9 +8,27 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BuildScenes/Build 0.1.unity
     guid: e6709302fd61a434b825117f4db7f247
+  - enabled: 1
+    path: Assets/Scenes/Levels/UpperShipTest.unity
+    guid: 4a174b79ac5cf6f44b32a545657d742f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1Test.unity
+    guid: 086c18cb2e66db94f8e8a3f685285209
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2Test.unity
+    guid: 5f467b910adefbe419a803b33ecbefab
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level3Test.unity
+    guid: 59f602d3db1a5ae429d7edb9fbf159a0
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelFINALTest.unity
+    guid: 15867ada4a6afc042b024aeb59b7ed1f
+  - enabled: 1
+    path: Assets/Scenes/OliviaTestScenes/LevelTestingOlivia.unity
+    guid: 567f3892d2b1ba64c89fbe601b64b98e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
