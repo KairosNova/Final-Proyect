@@ -8,15 +8,10 @@ public class StunTrigger : MonoBehaviour
     [SerializeField] private Collider2D triggerCollider;
     [SerializeField] private float stunTime;
 
-    private IStunnable stunnedEntity; // temporal
-
-    public void OnInteract(InputAction.CallbackContext context)
+    public void Trigger()
     {
-        if (context.started)
-        {
-            triggerCollider.enabled = true;
-            Invoke(nameof(DisableTrigger), stunTime);
-        }
+        triggerCollider.enabled = true;
+        Invoke(nameof(DisableTrigger), stunTime);
     }
 
     private void DisableTrigger()
@@ -30,8 +25,6 @@ public class StunTrigger : MonoBehaviour
 
         Debug.Log("DENTRO STUN!");
 
-        stunnedEntity = collision.GetComponentInParent<IStunnable>();
-
-        stunnedEntity.OnStun();
+        collision.GetComponentInParent<IStunnable>().OnStun();
     }
 }

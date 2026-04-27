@@ -2,9 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class FlashLightVisuals : MonoBehaviour
 {
+    [Header("LIGHT")]
     [SerializeField] private Light2D flashlightLight;
     [SerializeField] private float impactAddedLightIntensity;
     private float baseLightIntensity;
@@ -15,9 +17,9 @@ public class FlashLightVisuals : MonoBehaviour
         baseLightIntensity = flashlightLight.intensity;
     }
 
-    public void OnInteract(InputAction.CallbackContext context)
+    public void Trigger()
     {
-        if (context.started) StartCoroutine(FlashLightImpactVisual());
+        StartCoroutine(FlashLightImpactVisual());
     }
 
     private IEnumerator FlashLightImpactVisual()
@@ -31,4 +33,5 @@ public class FlashLightVisuals : MonoBehaviour
         }
         flashlightLight.intensity = baseLightIntensity;
     }
+
 }

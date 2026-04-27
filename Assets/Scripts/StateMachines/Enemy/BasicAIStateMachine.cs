@@ -70,7 +70,6 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
                 InvokeRepeating(nameof(FollowTarget), 0f, followingCheckRate);
             break;
         }
-        Debug.Log("Estado Iniciado");
     }
 
     private void EndCurrentState()
@@ -121,13 +120,11 @@ public class BasicAIStateMachine : MonoBehaviour, IStunnable
 
     public void OnStun()
     {
-        Debug.Log("Stuneado");
         agent.isStopped = true;
         Invoke(nameof(DeStun), stunTime);
     }
     public void DeStun()
     {
-        Debug.Log("DESStuneado");
         agent.isStopped = false;
     }
 }
