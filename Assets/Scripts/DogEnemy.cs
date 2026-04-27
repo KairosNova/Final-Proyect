@@ -24,6 +24,7 @@ public class DogEnemy : EnemyBase
         agentMovement.SetSpeed(moveSpeed);
         if (anim != null) anim.SetFloat("Speed", moveSpeed);
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
