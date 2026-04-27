@@ -3,25 +3,30 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [Header("Panels")]
-    public GameObject mainPanel;
-    public GameObject settingsPanel;
+    [Header("SCENES")]
+    [SerializeField] private string startScene;
+    [SerializeField] private float startTransitionTime;
 
-    [Header("Audio")]
-    public AudioSource musicSource;
+
+    [Header("PANELS")]
+    [SerializeField] private GameObject mainPanel;
+    [SerializeField] private GameObject settingsPanel;
+
+    [Header("AUDIO")]
+    [SerializeField] private AudioSource musicSource;
 
     void Start()
     {
-        if (!musicSource.isPlaying)
+        if (musicSource != null && !musicSource.isPlaying) // migrar a singleton de musica
         {
             musicSource.Play();
         }
     }
+
     // 🎮 START GAME
     public void StartGame()
     {
-        Debug.Log("Starting Game...");
-        SceneManager.LoadScene("UpperShipTest"); 
+        SceneTransitionUtility.Instance.LoadScene(startScene, TransitionType.Fill, startTransitionTime);
     }
 
     // ⚙️ OPEN SETTINGS
