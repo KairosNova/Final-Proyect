@@ -119,9 +119,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &441743998 stripped
+--- !u!4 &183148347 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7656288870950612477, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2273662572955066425, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
   m_PrefabInstance: {fileID: 1479113117333557147}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &782146769 stripped
@@ -517,7 +517,7 @@ PrefabInstance:
     - target: {fileID: 693894575193816530, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: arms
       value: 
-      objectReference: {fileID: 441743998}
+      objectReference: {fileID: 183148347}
     - target: {fileID: 693894575193816530, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: torso
       value: 
@@ -597,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 4325905270313601457, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: armsAnimator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1244091521}
     - target: {fileID: 4325905270313601457, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: lineRenderer
       value: 
@@ -616,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4927292227973293933, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5203528150837550722, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -676,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7656288870950612477, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39899993
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 8150400124351762397, guid: 37ebd1a62897f924c8790b21bb3f641d, type: 3}
       propertyPath: m_LocalPosition.y

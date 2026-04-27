@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BuildScenes/Build 0.1.unity
     guid: e6709302fd61a434b825117f4db7f247
   - enabled: 1
+    path: Assets/Scenes/AlahrosScene.unity
+    guid: 0c447d86489d968499da8bfa95564709
+  - enabled: 1
     path: Assets/Scenes/Levels/UpperShipTest.unity
     guid: 4a174b79ac5cf6f44b32a545657d742f
   - enabled: 1
