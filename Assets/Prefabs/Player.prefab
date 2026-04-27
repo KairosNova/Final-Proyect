@@ -10518,8 +10518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c70a088837e5b43807c6bd0425c97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
-  sprintSpeed: 9
+  speed: 2
+  sprintSpeed: 6
 --- !u!114 &4325905270313601457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10533,17 +10533,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   firePoint: {fileID: 1100077250301824378}
+  armsAnimator: {fileID: 0}
+  lineRenderer: {fileID: 3369594838427045396}
   range: 10
   fireDelay: 2
-  movementLockTime: 0.4
+  movementLockTime: 1
   damage: 100
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  lineRenderer: {fileID: 3369594838427045396}
   tracerDuration: 0.01
   isShooting: 0
-  armsAnimator: {fileID: 0}
 --- !u!61 &6165974192244092441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10620,7 +10620,7 @@ MonoBehaviour:
   onDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2704747308719317057}
         m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -11290,6 +11290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlashLight
   rechargeTime: 3
+  barFillImage: {fileID: 1160178929945912372}
 --- !u!114 &6034319132440394681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11305,7 +11306,6 @@ MonoBehaviour:
   flashlightLight: {fileID: 4408572023006348596}
   impactAddedLightIntensity: 10
   decayTime: 0.2
-  barFillImage: {fileID: 1160178929945912372}
 --- !u!114 &8199449014127520843
 MonoBehaviour:
   m_ObjectHideFlags: 0
