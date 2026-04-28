@@ -20,7 +20,8 @@ public class PlayerHealth : Health
         if (playerData != null)
         {
             this.maxHealth = playerData.maxHealth;
-            this.currentHealth = playerData.currentHealth;
+            this.currentHealth = playerData.currentHealth <= 0 ? playerData.maxHealth : playerData.currentHealth;
+
             // Actualizamos la UI inmediatamente al cargar la escena
             onHealthPercentageChanged?.Invoke(this.currentHealth / this.maxHealth);
         }
@@ -49,6 +50,10 @@ public class PlayerHealth : Health
     private IEnumerator DelayedEvent()
     {
         yield return new WaitForSeconds(0.8f);
+        if (playerData != null)
+        {
+            playerData.currentHealth = playerData.maxHealth; 
+        }
         gameObject.SetActive(false);
         SceneManager.LoadScene("NewMainMenu");
     }
