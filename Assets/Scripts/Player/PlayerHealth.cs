@@ -39,13 +39,15 @@ public class PlayerHealth : Health
         if (currentHealth <= 0)
         {
             OnDeath();
-            StartCoroutine(DelayedEvent());
+            //StartCoroutine(DelayedEvent());
         }
         
     }
     public override void OnDeath()
     {
         if (anim != null)anim.SetTrigger("Die");
+
+        SceneTransitionUtility.Instance.LoadScene("NewMainMenu", TransitionType.Fade, 2f);
     }
     private IEnumerator DelayedEvent()
     {
@@ -55,6 +57,5 @@ public class PlayerHealth : Health
             playerData.currentHealth = playerData.maxHealth; 
         }
         gameObject.SetActive(false);
-        SceneManager.LoadScene("NewMainMenu");
     }
 }
