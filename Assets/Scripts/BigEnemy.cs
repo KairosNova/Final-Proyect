@@ -53,7 +53,12 @@ public class BigEnemy : MonoBehaviour
         anim = GetComponent<Animator>();
 
         // Inicia el juego siendo INVULNERABLE
-        if (myHealth != null) myHealth.SetInvulnerable(true);
+        if (myHealth != null)
+        {
+            myHealth.onDeath.AddListener(OnDeath);
+            myHealth.SetInvulnerable(true);
+
+        } 
     }
 
     void Update()
