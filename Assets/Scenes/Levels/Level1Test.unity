@@ -10397,6 +10397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 674629330208185436, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: orthographic size
+      value: 3.12
+      objectReference: {fileID: 0}
     - target: {fileID: 2220690668948589376, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -10408,6 +10412,10 @@ PrefabInstance:
     - target: {fileID: 6254135088341670062, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.9297202
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423556338216878603, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: orthographic size
+      value: 5.46875
       objectReference: {fileID: 0}
     - target: {fileID: 8123320138558053840, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10456,8 +10464,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2236069428212891978, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1236025902}
   m_SourcePrefab: {fileID: 100100000, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+--- !u!1 &1236025901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2236069428212891978, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+  m_PrefabInstance: {fileID: 1236025900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1236025902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236025901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95287a1ad9f03e409456398af345997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConfinerFix
 --- !u!1 &1238606754
 GameObject:
   m_ObjectHideFlags: 0
