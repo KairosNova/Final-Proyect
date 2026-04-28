@@ -7053,7 +7053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1189599967373870305, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2297199
+      value: -1.9297199
       objectReference: {fileID: 0}
     - target: {fileID: 2220690668948589376, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: Lens.OrthographicSize
@@ -7215,7 +7215,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.33333334
+  m_VoxelSize: 0.14333333
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
