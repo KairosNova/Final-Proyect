@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 40
