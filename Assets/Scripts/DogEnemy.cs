@@ -50,6 +50,8 @@ public class DogEnemy : EnemyBase, IStunnable
     {
         anim.SetBool("IsStunned", true);
         agentMovement.OnStun();
+
+        Invoke(nameof(DeStun), agentMovement.stunTime);
     }
 
     public void DeStun()

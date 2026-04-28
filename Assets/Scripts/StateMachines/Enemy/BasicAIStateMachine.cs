@@ -25,7 +25,7 @@ public class BasicAIStateMachine : MonoBehaviour
     private Transform target;
 
     [Header("STUN")]
-    [SerializeField] private float stunTime;
+    public float stunTime;
 
     private void Start()
     {
@@ -121,8 +121,8 @@ public class BasicAIStateMachine : MonoBehaviour
     public void OnStun()
     {
         agent.isStopped = true;
-        Invoke(nameof(DeStun), stunTime);
     }
+
     public void DeStun()
     {
         agent.isStopped = false;
