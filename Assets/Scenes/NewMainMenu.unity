@@ -1083,8 +1083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57708f37b69bdd4ca434da599c8356a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
+  playerData: {fileID: 11400000, guid: 0a051a28df5bddf41b37a6a2e02a7a5a, type: 2}
   startScene: TransitionMainGame
-  startTransitionTime: 0
   mainPanel: {fileID: 0}
   settingsPanel: {fileID: 0}
   musicSource: {fileID: 0}
