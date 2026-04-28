@@ -43,7 +43,7 @@ public class DogEnemy : EnemyBase, IStunnable
         if (anim != null) anim.SetTrigger("Die");
 
         collider.enabled = false;
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 1f);
     }
 
     public void OnStun()

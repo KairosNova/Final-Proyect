@@ -40,7 +40,7 @@ public class ProximityInteractor : MonoBehaviour
 
     private void Update() // se podria cambiar a OnTick en un futuro para mejor performance
     {
-        if (isLookingForTarget && targets.Count != 0)
+        if (isLookingForTarget && targets != null && targets.Count != 0)
         {
             CheckClosestTarget();
             AttachInteractorVisuals(closestTarget);
