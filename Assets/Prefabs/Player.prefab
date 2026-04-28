@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8347296398659620541}
   - component: {fileID: 7107890047364830769}
-  - component: {fileID: 7526098294983503212}
+  - component: {fileID: 7279172925335377198}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -301,7 +301,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &7526098294983503212
+--- !u!95 &7279172925335377198
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -5309,7 +5309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8476000322701682846
 Transform:
   m_ObjectHideFlags: 0
@@ -5719,8 +5719,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   firePoint: {fileID: 1100077250301824378}
-  armsAnimator: {fileID: 6232091968382376300}
-  lineRenderer: {fileID: 3918646347620212474}
+  armsAnimator: {fileID: 2882733570146769125}
+  lineRenderer: {fileID: 6773413286192019723}
   range: 10
   fireDelay: 2
   movementLockTime: 0.8
@@ -5801,7 +5801,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   onDamage:
     m_PersistentCalls:
@@ -5831,7 +5831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100077250301824378}
-  - component: {fileID: 3918646347620212474}
+  - component: {fileID: 6773413286192019723}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -5854,7 +5854,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7656288870950612477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &3918646347620212474
+--- !u!120 &6773413286192019723
 LineRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -6115,7 +6115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7656288870950612477}
   - component: {fileID: 2051360677177685510}
-  - component: {fileID: 6232091968382376300}
+  - component: {fileID: 2882733570146769125}
   m_Layer: 0
   m_Name: Arms
   m_TagString: Untagged
@@ -6198,7 +6198,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &6232091968382376300
+--- !u!95 &2882733570146769125
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -6424,7 +6424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5735884688025117918
 Transform:
   m_ObjectHideFlags: 0
