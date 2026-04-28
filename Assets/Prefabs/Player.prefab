@@ -10521,7 +10521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
   firePoint: {fileID: 1100077250301824378}
-  armsAnimator: {fileID: 0}
+  armsAnimator: {fileID: 234414806279739776}
   lineRenderer: {fileID: 3369594838427045396}
   range: 10
   fireDelay: 2
