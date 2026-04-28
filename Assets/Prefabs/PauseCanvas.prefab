@@ -3086,7 +3086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2556164294639235535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3187,6 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab53160760072814e985d3c1b623c96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  mainMenuTransitionTime: 2
 --- !u!1 &6263836656482182170
 GameObject:
   m_ObjectHideFlags: 0
