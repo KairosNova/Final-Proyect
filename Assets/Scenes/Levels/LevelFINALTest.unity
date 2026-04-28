@@ -7053,7 +7053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1189599967373870305, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9297199
+      value: -3.2297199
       objectReference: {fileID: 0}
     - target: {fileID: 2220690668948589376, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: Lens.OrthographicSize
@@ -7063,17 +7063,41 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 152126061}
+    - target: {fileID: 5259844541605758075, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259844541605758075, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: m_CropFrame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259844541605758075, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: m_GridSnapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5495193049678547027, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: FollowOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6254135088341670062, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.54753
+      value: 21.547531
       objectReference: {fileID: 0}
     - target: {fileID: 6254135088341670062, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1124227
+      value: -3.2297199
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331568689176522525, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: Damping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331568689176522525, guid: e3c768999b9963b4595cd6f068694910, type: 3}
+      propertyPath: SlowingDistance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7423556338216878603, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: orthographic size
-      value: 5.125
+      value: 2.8125
       objectReference: {fileID: 0}
     - target: {fileID: 8123320138558053840, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7125,7 +7149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454820064631711292, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_Size.y
-      value: 12.874867
+      value: 12.87487
       objectReference: {fileID: 0}
     - target: {fileID: 8454820064631711292, guid: e3c768999b9963b4595cd6f068694910, type: 3}
       propertyPath: m_Offset.x
@@ -7339,7 +7363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1410282773
 Transform:
   m_ObjectHideFlags: 0
