@@ -20,8 +20,8 @@ public class TransitionScreen : MonoBehaviour
     public TextMeshProUGUI textComponent;
     [TextArea] public string fullText;
 
-    public float delayBetweenWords = 0.1f;
-    public float startDelay = 3f;
+    public float delayBetweenWords = 0.04f;
+    public float startDelay = 2f;
     public float endDelay = 3f;
 
     void Start()
@@ -54,6 +54,6 @@ public class TransitionScreen : MonoBehaviour
             yield return new WaitForSeconds(delayBetweenWords);
         }
         yield return new WaitForSeconds(endDelay);
-        SceneManager.LoadScene("Level1Test");
+        SceneManager.LoadScene("UpperShipTest");
     }
 }

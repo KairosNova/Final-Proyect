@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BuildScenes/Build 0.1.unity
     guid: e6709302fd61a434b825117f4db7f247
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlahrosScene.unity
     guid: 0c447d86489d968499da8bfa95564709
+  - enabled: 1
+    path: Assets/Scenes/NewMainMenu.unity
+    guid: c0615c263e0b2fc4099787cdcfc8d74c
   - enabled: 1
     path: Assets/Scenes/TransitionMainGame.unity
     guid: ac938ebf64b8a6c4d90a04c6702857f1
