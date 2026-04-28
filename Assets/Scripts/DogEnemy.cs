@@ -3,8 +3,10 @@ using UnityEngine;
 public class DogEnemy : EnemyBase, IStunnable
 {
     [Header("Perro")]
+    [SerializeField] private Collider2D collider;
     [SerializeField] private int damage = 50;
     private Animator anim;
+
     protected override void Awake()
     {
         base.Awake();
@@ -29,6 +31,7 @@ public class DogEnemy : EnemyBase, IStunnable
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            collider.enabled = false;
             playerHealth.TakeDamage(damage);
             agentMovement.SetState(AgentState.Static);
             if (anim != null) anim.SetTrigger("Attack");
@@ -38,6 +41,8 @@ public class DogEnemy : EnemyBase, IStunnable
     public override void OnDeath()
     {
         if (anim != null) anim.SetTrigger("Die");
+
+        collider.enabled = false;
         Destroy(gameObject, 1);
     }
 

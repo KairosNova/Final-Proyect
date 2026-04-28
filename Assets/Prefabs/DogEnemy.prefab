@@ -190,6 +190,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   patrolSpeed: 2
+  collider: {fileID: 7224378821763575818}
   damage: 15
 --- !u!114 &2786106899649085161
 MonoBehaviour:
@@ -203,6 +204,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255396f744d37e74cb0e898eaf982054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onDamage:
+    m_PersistentCalls:
+      m_Calls: []
   maxHealth: 100
   currentHealth: 0
   isInvulnerable: 0
