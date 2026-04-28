@@ -169,14 +169,24 @@ public class BigEnemy : MonoBehaviour
         {
             if (alreadyHit) break;
             if (!hit.CompareTag("Player")) continue;
-            
-            Health playerHealth = hit.transform.root.GetComponent<Health>();
-            if (playerHealth != null)
+            Vector2 directionToPlayer = (hit.transform.position - transform.position).normalized;
+            Vector2 facing = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+            float angle = Vector2.Angle(facing, directionToPlayer);
+            bool playerIsBelow = hit.transform.position.y < transform.position.y - 0.5f;
+            Debug.Log($"Ángulo al jugador: {angle} | Facing: {facing}");
+
+            if (angle <= 75f && !playerIsBelow)
             {
-                playerHealth.TakeDamage(damage);
-                Debug.Log("¡El Big Guy te aplastó!");
-                alreadyHit = true;
+                Health playerHealth = hit.transform.root.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage);
+                    Debug.Log("¡El Big Guy te aplastó!");
+                    alreadyHit = true;
+                }
             }
+            
+        
             
         }
 

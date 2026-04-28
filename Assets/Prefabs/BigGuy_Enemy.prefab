@@ -5048,7 +5048,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  maxHealth: 400
+  maxHealth: 200
   currentHealth: 0
   isInvulnerable: 0
 --- !u!114 &302616583112923444
@@ -5067,10 +5067,10 @@ MonoBehaviour:
   detectionRange: 5
   hasDetectedPlayer: 0
   moveSpeed: 2
-  damage: 50
-  damageShield: 20
-  attackRange: 2
-  shieldRange: 0.8
+  damage: 20
+  damageShield: 5
+  attackRange: 2.5
+  shieldRange: 0
   attackWindup: 0.5
   vulnerableDuration: 3
   deathAnimationTime: 1.2
