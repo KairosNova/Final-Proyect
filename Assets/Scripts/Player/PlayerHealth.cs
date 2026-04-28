@@ -9,14 +9,12 @@ public class PlayerHealth : Health
     public PlayerData playerData;
     private Animator anim;
     public static event Action<float> onHealthPercentageChanged;
+
     public void Start()
     {
         anim = GetComponentInChildren<Animator>();
-         Debug.Log($"Animator encontrado: {anim.gameObject.name}");
-    }
+        Debug.Log($"Animator encontrado: {anim.gameObject.name}");
 
-    public void OnEnable()
-    {
         if (playerData != null)
         {
             this.maxHealth = playerData.maxHealth;
@@ -39,13 +37,15 @@ public class PlayerHealth : Health
         if (currentHealth <= 0)
         {
             OnDeath();
-            StartCoroutine(DelayedEvent());
+            //StartCoroutine(DelayedEvent());
         }
         
     }
     public override void OnDeath()
     {
         if (anim != null)anim.SetTrigger("Die");
+
+        SceneTransitionUtility.Instance.LoadScene("NewMainMenu", TransitionType.Fade, 2f);
     }
     private IEnumerator DelayedEvent()
     {
@@ -55,6 +55,5 @@ public class PlayerHealth : Health
             playerData.currentHealth = playerData.maxHealth; 
         }
         gameObject.SetActive(false);
-        SceneManager.LoadScene("NewMainMenu");
     }
 }
