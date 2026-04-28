@@ -42,15 +42,14 @@ public class Health : MonoBehaviour
         Debug.Log($"{gameObject.name} recibió {damage} daño. HP: {currentHealth}/{maxHealth}");
         if (currentHealth <= 0)
         {
-            Death(); 
+            OnDeath(); 
             onDeath?.Invoke();
         }
         
     }
     
-    protected virtual void Death()
+    public virtual void OnDeath()
     {
         Debug.Log($"{gameObject.name} murió");
-        SendMessage("OnDeath", SendMessageOptions.DontRequireReceiver);
     }
 }
