@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [Header("INITIAL SETUP")]
+    [SerializeField] private PlayerData playerData;
+
     [Header("SCENES")]
     [SerializeField] private string startScene;
-    [SerializeField] private float startTransitionTime;
-
 
     [Header("PANELS")]
     [SerializeField] private GameObject mainPanel;
@@ -26,7 +27,8 @@ public class MainMenuManager : MonoBehaviour
     // 🎮 START GAME
     public void StartGame()
     {
-        SceneTransitionUtility.Instance.LoadScene(startScene, TransitionType.Fill, startTransitionTime);
+        playerData.currentHealth = playerData.maxHealth;
+        SceneManager.LoadScene(startScene);
     }
 
     // ⚙️ OPEN SETTINGS

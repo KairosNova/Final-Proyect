@@ -9,14 +9,12 @@ public class PlayerHealth : Health
     public PlayerData playerData;
     private Animator anim;
     public static event Action<float> onHealthPercentageChanged;
+
     public void Start()
     {
         anim = GetComponentInChildren<Animator>();
-         Debug.Log($"Animator encontrado: {anim.gameObject.name}");
-    }
+        Debug.Log($"Animator encontrado: {anim.gameObject.name}");
 
-    public void OnEnable()
-    {
         if (playerData != null)
         {
             this.maxHealth = playerData.maxHealth;
