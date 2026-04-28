@@ -5145,6 +5145,14 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8576419346547410066, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576419346547410066, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8603757181624632212, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
       propertyPath: agentMovement
       value: 
@@ -5153,6 +5161,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8604475484586605546, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d8fa3eead8332814f9b08e1d46f63f93, type: 2}
     m_RemovedComponents:
     - {fileID: 5647885008858555706, guid: 57ab2a9b8feea5d46be43d479076c989, type: 3}
     m_RemovedGameObjects: []

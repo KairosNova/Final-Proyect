@@ -1,7 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Rendering.Universal;
 
 public class StunTrigger : MonoBehaviour
 {
@@ -22,8 +20,6 @@ public class StunTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy")) return;
-
-        Debug.Log("DENTRO STUN!");
 
         collision.GetComponentInParent<IStunnable>().OnStun();
     }

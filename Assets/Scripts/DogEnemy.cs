@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DogEnemy : EnemyBase
+public class DogEnemy : EnemyBase, IStunnable
 {
     [Header("Perro")]
     [SerializeField] private int damage = 50;
@@ -38,6 +38,18 @@ public class DogEnemy : EnemyBase
     public override void OnDeath()
     {
         if (anim != null) anim.SetTrigger("Die");
-        Destroy(gameObject);
+        Destroy(gameObject, 1);
+    }
+
+    public void OnStun()
+    {
+        anim.SetBool("IsStunned", true);
+        agentMovement.OnStun();
+    }
+
+    public void DeStun()
+    {
+        anim.SetBool("IsStunned", false);
+        agentMovement.DeStun();
     }
 }
