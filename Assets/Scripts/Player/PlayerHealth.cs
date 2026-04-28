@@ -50,5 +50,6 @@ public class PlayerHealth : Health
     {
         yield return new WaitForSeconds(0.8f);
         gameObject.SetActive(false);
+        SceneManager.LoadScene("NewMainMenu");
     }
 }
