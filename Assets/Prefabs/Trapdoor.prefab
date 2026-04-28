@@ -109,7 +109,7 @@ MonoBehaviour:
   scenes:
   - 
   transitionType: 0
-  transitionTime: 0
+  transitionTime: 2
 --- !u!50 &6398481613174783747
 Rigidbody2D:
   serializedVersion: 5

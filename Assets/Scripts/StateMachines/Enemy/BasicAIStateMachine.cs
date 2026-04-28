@@ -8,7 +8,7 @@ public enum AgentState
     FollowingTarget // Siguiendo al objetivo
 }
 
-public class BasicAIStateMachine : MonoBehaviour, IStunnable
+public class BasicAIStateMachine : MonoBehaviour
 {
     [SerializeField] private AgentState state;
     [SerializeField] private NavMeshAgent agent;
